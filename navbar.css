@@ -4,9 +4,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background-color: #621414; /* Red background like in image 2 */
+    background-color: #c62828;
     color: white;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .navbar-left {
@@ -20,13 +20,12 @@
     height: 40px;
     object-fit: contain;
     border-radius: 50%;
-    background: white;
+    background: #fff;
 }
 
 .navbar-title {
     font-size: 22px;
     font-weight: bold;
-    color: white;
     letter-spacing: 1px;
 }
 
@@ -41,54 +40,36 @@
 .nav-links li a {
     text-decoration: none;
     color: white;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 8px 16px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
 }
 
 .nav-links li a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
+    background: #fff;
+    color: #c62828;
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
-        padding: 15px 20px;
+        padding: 10px 12px;
     }
-
     .navbar-left {
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
-
     .nav-links {
-        gap: 15px;
-        flex-wrap: wrap;
+        gap: 12px;
     }
-
     .navbar-title {
-        font-size: 20px;
+        font-size: 18px;
     }
-
     .navbar-logo {
-        width: 35px;
-        height: 35px;
+        width: 32px;
+        height: 32px;
     }
 }
 
-@media (max-width: 480px) {
-    .nav-links {
-        flex-direction: column;
-        width: 100%;
-        gap: 10px;
-    }
-    
-    .nav-links li a {
-        display: block;
-        text-align: center;
-    }
-}
