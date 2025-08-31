@@ -1,0 +1,272 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Campus Voting Page</title> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> 
+  <link rel="stylesheet" href="voting_pg.css">
+</head> 
+<body> 
+
+  <nav class="navbar"> 
+    <div class="navbar-left"> 
+      <img src="chitkara-logo.png" alt="Chitkara" class="navbar-logo"> 
+      <span class="navbar-title">Chitkara Diaries</span> 
+    </div> 
+    <ul class="nav-links"> 
+      <li><a href="#home">Home</a></li> 
+      <li><a href="#journal">Journal</a></li> 
+      <li><a href="#popular">Popular</a></li> 
+      <li><a href="#clubs">Clubs</a></li> 
+      <li><a href="#contact">Contact</a></li> 
+    </ul> 
+  </nav> 
+
+  <div class="main"> 
+    <!-- Sticky Left Hamburger Menu --> 
+    <nav class="hamburger-menu" id="hamburgerMenu"> 
+      <div class="menu-header"> 
+        <i class="fas fa-bars"></i> 
+        <span>Voting Menu</span> 
+      </div> 
+      <div class="hamburger-links"> 
+        <a href="#fav-place-domain" class="hamburger-link"><i class="fas fa-map-marker-alt"></i><span>Fav Place</span></a> 
+        <a href="#hangout-domain" class="hamburger-link"><i class="fas fa-users"></i><span>Hangout</span></a> 
+        <a href="#food-domain" class="hamburger-link"><i class="fas fa-utensils"></i><span>Food</span></a> 
+        <a href="#events-domain" class="hamburger-link"><i class="fas fa-calendar-alt"></i><span>Events</span></a> 
+        <a href="#clubs-domain" class="hamburger-link"><i class="fas fa-music"></i><span>Clubs</span></a> 
+        <a href="#sports-domain" class="hamburger-link"><i class="fas fa-futbol"></i><span>Sports</span></a> 
+        <a href="#library-domain" class="hamburger-link"><i class="fas fa-book"></i><span>Library</span></a> 
+        <a href="#hostel-domain" class="hamburger-link"><i class="fas fa-bed"></i><span>Hostel</span></a> 
+        <a href="#memories-domain" class="hamburger-link"><i class="fas fa-star"></i><span>Memories</span></a> 
+      </div> 
+    </nav> 
+
+    
+    <div class="questions-grid"> 
+      <!-- Fav Place Domain --> 
+      <div class="domain-section" id="fav-place-domain" style="margin-top: 0.5rem;"> 
+        <div class="domain-title">Favorite Place</div> 
+        <div class="domain-cards"> 
+          <div class="card"> 
+            <h3>What is your most favorite place to visit in Chitkara University?</h3> 
+            <div class="options"> 
+              <label><input type="radio" name="q1"> Square 1</label> 
+              <label><input type="radio" name="q1"> Library</label> 
+              <label><input type="radio" name="q1"> Sportorium</label> 
+              <label><input type="radio" name="q1"> Other</label> 
+            </div> 
+            <button class="submit-btn">Submit Vote</button> 
+          </div> 
+          <div class="card"> 
+            <h3>Which is the most photogenic spot on campus?</h3> 
+            <div class="options"> 
+              <label><input type="radio" name="q2"> Alpha Zone</label> 
+              <label><input type="radio" name="q2"> Hostel Road</label> 
+              <label><input type="radio" name="q2"> Exploretorium</label> 
+              <label><input type="radio" name="q2"> Other</label> 
+            </div> 
+            <button class="submit-btn">Submit Vote</button> 
+          </div> 
+          <div class="card"> 
+            <h3>Where do you go for peace and quiet?</h3> 
+            <div class="options"> 
+              <label><input type="radio" name="q3"> Library</label> 
+              <label><input type="radio" name="q3"> Alpha Zone</label> 
+              <label><input type="radio" name="q3"> Temple</label> 
+              <label><input type="radio" name="q3"> Hostel Room</label> 
+            </div> 
+            <button class="submit-btn">Submit Vote</button> 
+          </div> 
+        </div> 
+      </div> 
+
+      <!-- Hangout Domain --> 
+      <div class="domain-section" id="hangout-domain"> 
+        <div class="domain-title">Hangout</div> 
+        <div class="domain-cards"> 
+          <div class="card"> 
+            <h3>Favorite place to hangout with friends?</h3> 
+            <div class="options"> 
+              <label><input type="radio" name="q4"> Subway</label> 
+              <label><input type="radio" name="q4"> Square 1 </label> 
+              <label><input type="radio" name="q4"> Hostel Common Room</label> 
+              <label><input type="radio" name="q4"> Other</label> 
+            </div> 
+            <button class="submit-btn">Submit Vote</button> 
+          </div> 
+          <div class="card"> 
+            <h3>Where do you spend most of your free time?</h3> 
+            <div class="options"> 
+              <label><input type="radio" name="q5"> Hostel</label> 
+              <label><input type="radio" name="q5"> Square 1</label> 
+              <label><input type="radio" name="q5"> Library</label> 
+              <label><input type="radio" name="q5"> Sports Ground</label> 
+            </div> 
+            <button class="submit-btn">Submit Vote</button> 
+          </div> 
+          <div class="card"> 
+            <h3>Best place for group study?</h3> 
+            <div class="options"> 
+              <label><input type="radio" name="q6"> Library</label> 
+              <label><input type="radio" name="q6"> Hostel Room</label> 
+              <label><input type="radio" name="q6"> Square 1</label> 
+              <label><input type="radio" name="q6"> CSE Block</label> 
+            </div> 
+            <button class="submit-btn">Submit Vote</button> 
+          </div> 
+        </div> 
+      </div> 
+
+      <!-- Food Domain --> 
+      <div class="domain-section" id="food-domain"> 
+        <div class="domain-title">Food</div> 
+        <div class="domain-cards"> 
+          <div class="card"> 
+            <h3>Best food spot on campus?</h3> 
+            <div class="options"> 
+              <label><input type="radio" name="q7"> Square 1</label> 
+              <label><input type="radio" name="q7"> Square 2</label> 
+              <label><input type="radio" name="q7"> Subway </label> 
+              <label><input type="radio" name="q7"> First Coffee</label> 
+            </div> 
+            <button class="submit-btn">Submit Vote</button> 
+          </div> 
+          <div class="card"> 
+            <h3>Favorite snack at Chitkara?</h3> 
+            <div class="options"> 
+              <label><input type="radio" name="q8"> Maggi</label> 
+              <label><input type="radio" name="q8"> Sandwich</label> 
+              <label><input type="radio" name="q8"> Chaat</label> 
+              <label><input type="radio" name="q8"> Pasta</label> 
+            </div> 
+            <button class="submit-btn">Submit Vote</button> 
+          </div> 
+          <div class="card">
+             <h3>Where do you get the best coffee?</h3> 
+             <div class="options">
+                 <label><input type="radio" name="q9"> Dohful</label>
+                 <label><input type="radio" name="q9"> Chai Nagri</label>
+                 <label><input type="radio" name="q9"> First Coffee</label>
+                 <label><input type="radio" name="q9"> Hostel Mess</label>
+                 </div>
+                  <button class="submit-btn">Submit Vote</button> 
+                </div> 
+            </div> 
+        </div>
+         <!-- Events Domain --> 
+          <div class="domain-section" id="events-domain">
+             <div class="domain-title">Events</div> <div class="domain-cards"> 
+                <div class="card"> <h3>Which event do you enjoy the most?</h3> 
+                    <div class="options"> 
+                        <label><input type="radio" name="q10"> Freshers'</label> 
+                        <label><input type="radio" name="q10"> Rangrezz</label> 
+                        <label><input type="radio" name="q10"> Sports Fest</label> 
+                        <label><input type="radio" name="q10"> Other</label> 
+                    </div> 
+                    <button class="submit-btn">Submit Vote</button> 
+                </div>
+                 <div class="card"> 
+                    <h3>Which event has the best food stalls?</h3> 
+                    <div class="options"> 
+                        <label><input type="radio" name="q11"> Rangrezz</label> 
+                        <label><input type="radio" name="q11"> Sports Fest</label> 
+                        <label><input type="radio" name="q11"> Hostel Night</label>
+                         <label><input type="radio" name="q11"> Other</label>
+                         </div> 
+                         <button class="submit-btn">Submit Vote</button> 
+                        </div> 
+                        <div class="card">
+                    <h3>Which event do you participate in the most?</h3> 
+                    <div class="options">
+                         <label><input type="radio" name="q12"> Sports Fest</label> 
+                         <label><input type="radio" name="q12"> Freshers'</label>
+                          <label><input type="radio" name="q12"> Hostel Night</label> 
+                          <label><input type="radio" name="q12"> None</label> 
+                        </div> 
+                        <button class="submit-btn">Submit Vote</button> 
+                    </div> 
+                </div> 
+            </div>
+           <!-- Clubs Domain -->
+             <div class="domain-section" id="clubs-domain"> 
+                <div class="domain-title">Clubs</div>
+                 <div class="domain-cards"> 
+                    <div class="card">
+                         <h3>Which club is your favorite?</h3> 
+                         <div class="options"> 
+                            <label><input type="radio" name="q13"> Music Club</label> 
+                            <label><input type="radio" name="q13"> Dance Club</label>
+                             <label><input type="radio" name="q13"> Coding Club</label>
+                              <label><input type="radio" name="q13"> Drama Club</label>
+                             </div>
+                              <button class="submit-btn">Submit Vote</button>
+                             </div>
+                    <div class="card"> 
+                            <h3>Which club organizes the best events?</h3>
+                             <div class="options"> 
+                                <label><input type="radio" name="q14"> Music Club</label> 
+                                <label><input type="radio" name="q14"> Dance Club</label> 
+                                <label><input type="radio" name="q14"> Coding Club</label>
+                                 <label><input type="radio" name="q14"> Drama Club</label>
+                                 </div> 
+                        <button class="submit-btn">Submit Vote</button>
+                     </div> 
+                     <div class="card"> 
+                        <h3>Which club would you like to join?</h3> <div class="options"> 
+                            <label><input type="radio" name="q15"> Music Club</label> 
+                            <label><input type="radio" name="q15"> Dance Club</label> 
+                            <label><input type="radio" name="q15"> Coding Club</label>
+                             <label><input type="radio" name="q15"> Drama Club</label> 
+                            </div> <button class="submit-btn">Submit Vote</button>
+                         </div> 
+                        </div> 
+                    </div>
+             <!-- Sports Domain -->
+               <div class="domain-section" id="sports-domain">
+                 <div class="domain-title">Sports</div> 
+                 <div class="domain-cards"> <div class="card"> 
+                    <h3>Favorite sport to play at Chitkara?</h3> 
+                    <div class="options"> 
+                        <label><input type="radio" name="q16"> Football</label>
+                         <label><input type="radio" name="q16"> Basketball</label>
+                          <label><input type="radio" name="q16"> Cricket</label> 
+                          <label><input type="radio" name="q16"> Badminton</label> 
+                        </div> 
+                        <button class="submit-btn">Submit Vote</button>
+                     </div> <div class="card"> <h3>Which sport do you watch the most?</h3>
+                       <div class="options"> 
+                        <label><input type="radio" name="q17"> Football</label> 
+                        <label><input type="radio" name="q17"> Basketball</label> 
+                      <label><input type="radio" name="q17"> Cricket</label> 
+                      <label><input type="radio" name="q17"> Volleyball</label>
+                     </div> 
+                     <button class="submit-btn">Submit Vote</button>
+                     </div>
+                      <div class="card">
+                         <h3>Which sport would you like to see more events for?</h3> 
+                         <div class="options"> 
+                          <label><input type="radio" name="q18"> Football</label> 
+                          <label><input type="radio" name="q18"> Basketball</label> 
+                          <label><input type="radio" name="q18"> Cricket</label> 
+                          <label><input type="radio" name="q18"> Pickleball</label>
+                         </div>
+                          <button class="submit-btn">Submit Vote</button>
+                         </div>
+                        
+                        </div> 
+                      </div> 
+                      <!-- Library Domain --> 
+                       <div class="domain-section" id="library-domain">
+                         <div class="domain-title">Library</div>
+                          <div class="domain-cards"> 
+                            <div class="card"> 
+                              <h3>How often do you visit the library?</h3> 
+                              <div class="options"> 
+                                <label><input type="radio" name="q19">Daily</label>
+                                 <label><input type="radio" name="q19"> Weekly</label>
+                                  <label><input type="radio" name="q19"> Rarely</label>
+                                   <label><input type="radio" name="q19"> Never</label>
+                                   </div>                              
+                            <button class="submit-btn">Submit Vote</button> </div> <div class="card"> <h3>Favorite spot in the library?</h3> <div class="options"> <label><input type="radio" name="q20"> Reading Room</label> <label><input type="radio" name="q20"> Computer Section</label> <label><input type="radio" name="q20"> Group Study Area</label> <label><input type="radio" name="q20"> Stacks</label> </div> <button class="submit-btn">Submit Vote</button> </div> <div class="card"> <h3>What do you use the library for most?</h3> <div class="options"> <label><input type="radio" name="q21"> Study</label> <label><input type="radio" name="q21"> Group Work</label> <label><input type="radio" name="q21"> Research</label> <label><input type="radio" name="q21"> Reading Novels</label> </div> <button class="submit-btn">Submit Vote</button> </div> </div> </div> <!-- Hostel Domain --> <div class="domain-section" id="hostel-domain"> <div class="domain-title">Hostel</div> <div class="domain-cards"> <div class="card"> <h3>Best thing about hostel life?</h3> <div class="options"> <label><input type="radio" name="q22"> Friends</label> <label><input type="radio" name="q22"> Food</label> <label><input type="radio" name="q22"> Freedom</label> <label><input type="radio" name="q22"> Events</label> </div> <button class="submit-btn">Submit Vote</button> </div> <div class="card"> <h3>What do you miss most about hostel during holidays?</h3> <div class="options"> <label><input type="radio" name="q23"> Friends</label> <label><input type="radio" name="q23"> Hostel Food</label> <label><input type="radio" name="q23"> Hostel Events</label> <label><input type="radio" name="q23"> Nothing</label> </div> <button class="submit-btn">Submit Vote</button> </div> <div class="card"> <h3>Favorite hostel event?</h3> <div class="options"> <label><input type="radio" name="q24"> Hostel Night</label> <label><input type="radio" name="q24"> DJ Night</label> <label><input type="radio" name="q24"> Sports</label> <label><input type="radio" name="q24"> Other</label> </div> <button class="submit-btn">Submit Vote</button> </div> </div> </div> <!-- Memories Domain --> <div class="domain-section" id="memories-domain"> <div class="domain-title">Memories</div> <div class="domain-cards"> <div class="card"> <h3>Your most memorable moment at Chitkara?</h3> <div class="options"> <label><input type="radio" name="q25"> First Day</label> <label><input type="radio" name="q25"> Fests</label> <label><input type="radio" name="q25"> Hostel Nights</label> <label><input type="radio" name="q25"> Other</label> </div> <button class="submit-btn">Submit Vote</button> </div> <div class="card"> <h3>Best memory with friends?</h3> <div class="options"> <label><input type="radio" name="q26"> Group Study</label> <label><input type="radio" name="q26"> Night Outs</label> <label><input type="radio" name="q26"> Hostel Fun</label> <label><input type="radio" name="q26"> Trips</label> </div> <button class="submit-btn">Submit Vote</button> </div> <div class="card"> <h3>Which moment would you relive?</h3> <div class="options"> <label><input type="radio" name="q27"> First Day</label> <label><input type="radio" name="q27"> Fests</label> <label><input type="radio" name="q27"> Hostel Nights</label> <label><input type="radio" name="q27"> Other</label> </div> <button class="submit-btn">Submit Vote</button> </div> </div> </div> </div> </div>
