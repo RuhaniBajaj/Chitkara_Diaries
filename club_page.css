@@ -80,6 +80,7 @@ body {
     background-color: #fff;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
 }
 
 .club-card img {
@@ -90,8 +91,12 @@ body {
 }
 
 .card-content {
-    padding: 15px;
+    padding: 20px 15px 20px 15px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 140px;
 }
 
 .card-content h3 {
@@ -104,6 +109,24 @@ body {
     font-size: 14px;
     color: #555;
     line-height: 1.4;
+}
+
+.know-more {
+    display: inline-block;
+    margin-top: auto;
+    margin-bottom: 0;
+    padding: 6px 18px;
+    background-color: #c62828;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-decoration: none;
+}
+.know-more:hover {
+    background-color: #1565c0;
 }
 
 /* Responsive */
