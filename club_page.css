@@ -133,10 +133,20 @@ body {
 @media (max-width: 768px) {
     .card-container {
         justify-content: center;
+        gap: 12px;
     }
-
     .club-card {
-        width: 90%;
+        width: 140px;
+        min-width: 120px;
+        max-width: 160px;
+        font-size: 12px;
+    }
+    .club-card img {
+        height: 80px;
+    }
+    .card-content {
+        padding: 10px 6px 10px 6px;
+        min-height: 80px;
     }
 }
 
