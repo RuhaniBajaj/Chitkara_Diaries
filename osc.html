@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navbar[1].css">
+    <link rel="stylesheet" href="basketball.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Open Source Chandigarh</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+  <div class="navbar-left">
+    <img src="images/logo.png" alt="Chitkara Logo" class="navbar-logo">
+    <span class="navbar-title">Chitkara Diaries</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Journal</a></li>
+    <li><a href="#">Popular</a></li>
+    <li><a href="#">Clubs</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+    </header>
+    <!-- Container 1: Moving Images -->
+    <div class="moving-images-container">
+        <div class="moving-strip">
+            <div class="moving-image"><img src="osc1.jpg" alt="img1"> </div>
+            <div class="moving-image"><img src="osc2.jpg" alt="img2">  </div>
+            <div class="moving-image"><img src="osc3.jpg" alt="img3">  </div>
+            <div class="moving-image"><img src="osc4.jpg" alt="img4" > </div>
+            <div class="moving-image"><img src="osc5.jpg" alt="img5" > </div>
+            <div class="moving-image"><img src="osc6.jpg" alt="img6" > </div>
+            <div class="moving-image"><img src="osc7.jpg" alt="img7" > </div>
+        </div>
+    </div>
+
+    <!-- Container 2: About Us Section -->
+    <div class="about-container">
+        <div class="about-text">
+            <h2>About Us - Chitkara University Open Source Chandigarh</h2>
+            <p>At Chitkara University Open Source Chandigarh(OSC), we believe in the power of collaboration, innovation, and community. Our mission is to create a
+                 vibrant ecosystem where students, developers, and technology enthusiasts can learn, share, and contribute to the world of open-source.</p>
+            <p>We are more than just a university club - we are a student-led tech community that thrives on curiosity, creativity, and inclusivity.
+                 From coding marathons and hackathons to workshops, meetups, and real-world projects, CUOSC provides a platform for every learner
+                  to explore the latest in Open Source, Web, AI/ML, Cloud, DevOps, and Cybersecurity.</p>
+            <p>Whether you are a beginner exploring your first line of code or a seasoned developer contributing to large projects,
+                OSC is the place where you can grow, network, and make an impact.Together, we are building a future powered by
+                 knowledge, collaboration, and open-source spirit.</p>
+        </div>
+        <div class="about-image">
+            <div class="basketball-court">
+                <video autoplay muted loop playsinline>
+        <source src="openSouce.mp4" type="video/mp4">
+        Your browser does not support the video.
+    </video>
+            </div>
+        </div>
+    </div><br><br>
+
+    <!-- Container 3: registration form and table -->
+   <div class="main-container">
+    
+    <!-- achievements table  -->
+    <div class="achievements-container">
+        <h2>🏆 Team Achievements</h2>
+        <div class="timeline-item left">
+      <div class="timeline-content">
+        <h3>🏆 Smart India Hackathon</h3>
+        <span class="tag">National</span>
+        <p>Winners in Software Category, representing CU at the national level.</p>
+       
+      </div>
+    </div>
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <h3>🌍 Google Summer of Code</h3>
+        <span class="tag">International</span>
+        <p>3 students selected as open-source contributors in global projects.</p>
+      </div>
+    </div>
+
+    
+    </div>
+
+    <!-- Right: Registration Form -->
+    <div class="registration-container">
+        <h2> Join Our Team</h2>
+        <form id="registrationForm">
+            <div class="form-grid">
+                <div class="form-group">
+                    <input type="text" id="firstName" name="firstName" placeholder=" " required>
+                    <label for="firstName">First Name *</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="lastName" name="lastName" placeholder=" " required>
+                    <label for="lastName">Last Name *</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder=" " required>
+                    <label for="email">Email Address *</label>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" name="phone" placeholder=" " required>
+                    <label for="phone">Phone Number *</label>
+                </div>
+                <div class="form-group">
+                    <input type="number" id="age" name="age" min="12" max="35" placeholder=" " required>
+                    <label for="age">Age *</label>
+                </div>
+                <div class="form-group">
+                    <select id="team" name="team">
+                        <option value="" hidden></option>
+                        <option value="orgamizing-team">Organizing Team</option>
+                        <option value="media-team">Media Team</option>
+                        <option value="graphics-team">Graphics Team</option>
+                        <option value="discipline-team">Discipline Team</option>
+                        <option value="technical-team">Techinal Team</option>
+                        <option value="content-team">Content Team</option>
+                        <option value="promotion-team">Promotion Team</option>
+                    </select>
+                    <label for="team">Preferred Team</label>
+                </div>
+                <div class="form-group">
+                    <select id="year" name="year" required>
+                        <option value="" hidden></option>
+                        <option value="first">1st Year</option>
+                        <option value="second">2nd Year</option>
+                        <option value="third">3rd Year</option>
+                        <option value="4th">4th Year</option>
+                    </select>
+                    <label for="year">Year *</label>
+                </div>
+                <div class="form-group full-width">
+                    <textarea id="skills" name="skills" placeholder=" "></textarea>
+                    <label for="skills">Skills</label>
+                </div>
+            </div>
+            <button type="submit" class="submit-btn">Register</button>
+           
+        </form>
+    </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <!-- head info -->
+    <div class="footer-info">
+      <h3> Open Source Team Coordinator</h3>
+      <p><strong>Name:</strong> Prateek Sharma</p>
+      <p><strong>Phone:</strong> +91 98765 43820</p>
+      <p><strong>Email:</strong> prateek.sharma@chitkara.edu.in</p>
+    </div>
+
+   <!-- socials -->
+    <div class="footer-social">
+      <h3>Connect with Chitkara University</h3>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/school/chitkara-university/" target="_blank" class="linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://www.instagram.com/chitkarau?igsh=M2V0cWozYmhxbDEw" target="_blank" class="instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://youtube.com/@chitkarauniversity?si=LVkoB_d80E0_aqfu" target="_blank" class="youtube">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</body> 
+</html>

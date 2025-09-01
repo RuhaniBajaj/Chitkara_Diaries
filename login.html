@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Login</title>
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="navbar.css"
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+        <div class="navbar-left">
+            <img src="chitkara_logo.jpeg" alt="Chitkara" class="navbar-logo">
+            <span class="navbar-title">Chitkara Diaries</span>
+        </div>
+            <ul class="nav-links">
+                <li>
+                    <a href="homepage.html" class="nav-link">
+                        Back to Home
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+  <!-- Login Container -->
+  <div class="login-container">
+    <div class="login-wrapper">
+
+      <!-- Hero Section -->
+      <div class="login-hero">
+        <div class="hero-content">
+          <h1>Campus Journey Begins Here</h1>
+          <p>Discover events, connect with peers, and make the most of your campus life</p>
+          <div class="stats-mini">
+            <div class="stat-item">
+              <span class="stat-number">100+</span>
+              <span class="stat-label">Campus Events</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">30+</span>
+              <span class="stat-label">Student Clubs</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">24/7</span>
+              <span class="stat-label">Campus Access</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form Section -->
+      <div class="login-form-section">
+        <div class="form-container">
+          <div class="form-header">
+            <h2>Student Login</h2>
+            <p>Enter your details to access your account</p>
+          </div>
+
+          <form class="login-form" action="homepage.html" method="GET">
+            <!-- Full Name -->
+            <div class="form-group">
+              <label for="fullname">Full Name</label>
+              <div class="input-wrapper">
+                <i class="fas fa-user"></i>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+              </div>
+            </div>
+
+            <!-- Roll Number -->
+            <div class="form-group">
+              <label for="roll">Roll Number</label>
+              <div class="input-wrapper">
+                <i class="fas fa-id-card"></i>
+                <input type="text" id="roll" name="roll" placeholder="Enter roll number" required>
+              </div>
+            </div>
+
+            <!-- Batch Year -->
+            <div class="form-group">
+              <label for="batch">Batch Year</label>
+              <div class="input-wrapper">
+                <i class="fas fa-calendar"></i>
+                <select id="batch" name="batch" required>
+                  <option value="" disabled selected>Select batch year</option>
+                  <option value="2020">2020</option>
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Course -->
+            <div class="form-group">
+              <label for="course">Course</label>
+              <div class="input-wrapper">
+                <i class="fas fa-graduation-cap"></i>
+                <select id="course" name="course" required>
+                  <option value="" disabled selected>Select your course</option>
+                  <option value="B.Tech">B.Tech</option>
+                  <option value="BCA">BCA</option>
+                  <option value="MBA">MBA</option>
+                  <option value="M.Tech">M.Tech</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <div class="input-wrapper">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+              </div>
+            </div>
+
+            <!-- Password -->
+            <div class="form-group password-wrapper">
+              <label for="password">Password</label>
+              <div class="input-wrapper">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+              </div>
+            </div>
+
+            <!-- Login Button -->
+            <button type="submit" class="login-btn">Login to Chitkara Diaries</button>
+
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

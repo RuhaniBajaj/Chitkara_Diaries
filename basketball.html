@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navbar[1].css">
+    <link rel="stylesheet" href="basketball.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Basketball Team Website</title>
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+  <div class="navbar-left">
+    <img src="images/logo.png" alt="Chitkara Logo" class="navbar-logo">
+    <span class="navbar-title">Chitkara Diaries</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Journal</a></li>
+    <li><a href="#">Popular</a></li>
+    <li><a href="#">Clubs</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+    </header>
+    <!-- Container 1: Moving Images -->
+    <div class="moving-images-container">
+        <div class="moving-strip">
+            <div class="moving-image"><img src="image1.jpg" alt="img1"> </div>
+            <div class="moving-image"><img src="image2.jpg" alt="img2">  </div>
+            <div class="moving-image"><img src="image3.jpg" alt="img3">  </div>
+            <div class="moving-image"><img src="image4.jpg" alt="img4" > </div>
+            <div class="moving-image"><img src="image6.jpg" alt="img6" > </div>
+            <div class="moving-image"><img src="image7.jpg" alt="img7" > </div>
+            <div class="moving-image"><img src="image5.jpg" alt="img5" > </div>
+            <div class="moving-image"><img src="image8.jpg" alt="img8" > </div>
+        </div>
+    </div>
+
+    <!-- Container 2: About Us Section -->
+    <div class="about-container">
+        <div class="about-text">
+            <h2>About Us - Chitkara University Basketball</h2>
+            <p>At Chitkara University, basketball is more than just a sport – it’s a culture of teamwork, discipline, and passion.
+                 Our basketball team represents the spirit of the university, bringing together talented players who train rigorously to achieve 
+                 excellence on and off the court. We are a passionate community of athletes dedicated to excellence both on and off the court.</p>
+            <p>With state-of-the-art facilities, professional coaching, and a competitive spirit, we prepare our athletes to shine in inter-university,
+                 state, and national level tournaments. Over the years, our team has built a reputation for resilience, sportsmanship, and a never-give-up attitude. 
+                 We believe in teamwork, discipline, and the pursuit of greatness.</p>
+            <p>Our experienced coaches and supportive team environment help players of all skill levels improve their game while building lasting friendships and valuable
+                 life skills. Beyond competition, the team embodies the values of leadership, inclusivity, and collaboration, inspiring the student community to pursue fitness,
+                  health, and holistic growth.</p>
+        </div>
+        <div class="about-image">
+            <div class="basketball-court">
+                <video autoplay muted loop playsinline>
+        <source src="basketballVideo.mp4" type="video/mp4">
+        Your browser does not support the video.
+    </video>
+            </div>
+        </div>
+    </div><br><br>
+
+    <!-- Container 3: registration form and table -->
+   <div class="main-container">
+    
+    <!-- achievements table  -->
+    <div class="achievements-container">
+        <h2>🏆 Team Achievements</h2>
+        <table class="achievements-table">
+            <thead>
+                <tr>
+                    <th>Championship</th>
+                    <th>Level</th>
+                    <th>Position</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Inter-College Basketball Cup</td>
+                    <td>College</td>
+                    <td>1st Place</td>
+                </tr>
+                <tr>
+                    <td>State Basketball Championship</td>
+                    <td>State</td>
+                    <td>2nd Place</td>
+                </tr>
+                <tr>
+                    <td>All India University Tournament</td>
+                    <td>National</td>
+                    <td>Quarter Finalist</td>
+                </tr>
+                <tr>
+                    <td>International Student League</td>
+                    <td>International</td>
+                    <td>Top 8</td>
+                </tr>
+                <tr>
+                    <td>State Inter-University Basketball League</td>
+                    <td>State</td>
+                    <td>Semi-Finalists</td>
+                </tr>
+                <tr>
+                    <td>All India Inter-University Tournament</td>
+                    <td>National</td>
+                    <td>Quarter Finalists</td>
+                </tr>
+            <tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Right: Registration Form -->
+    <div class="registration-container">
+        <h2>🏀 Join Our Basketball Team</h2>
+        <form id="registrationForm">
+            <div class="form-grid">
+                <div class="form-group">
+                    <input type="text" id="firstName" name="firstName" placeholder=" " required>
+                    <label for="firstName">First Name *</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="lastName" name="lastName" placeholder=" " required>
+                    <label for="lastName">Last Name *</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder=" " required>
+                    <label for="email">Email Address *</label>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" name="phone" placeholder=" " required>
+                    <label for="phone">Phone Number *</label>
+                </div>
+                <div class="form-group">
+                    <input type="number" id="age" name="age" min="12" max="35" placeholder=" " required>
+                    <label for="age">Age *</label>
+                </div>
+                <div class="form-group">
+                    <select id="position" name="position">
+                        <option value="" hidden></option>
+                        <option value="point-guard">Point Guard</option>
+                        <option value="shooting-guard">Shooting Guard</option>
+                        <option value="small-forward">Small Forward</option>
+                        <option value="power-forward">Power Forward</option>
+                        <option value="center">Center</option>
+                        <option value="any">Any Position</option>
+                    </select>
+                    <label for="position">Preferred Position</label>
+                </div>
+                <div class="form-group">
+                    <select id="experience" name="experience" required>
+                        <option value="" hidden></option>
+                        <option value="beginner">Beginner (0-1 years)</option>
+                        <option value="intermediate">Intermediate (2-5 years)</option>
+                        <option value="advanced">Advanced (5+ years)</option>
+                        <option value="professional">Professional/College</option>
+                    </select>
+                    <label for="experience">Experience Level *</label>
+                </div>
+                <div class="form-group">
+                    <input type="number" id="height" name="height" min="140" max="230" placeholder=" ">
+                    <label for="height">Height (cm)</label>
+                </div>
+                <div class="form-group full-width">
+                    <input type="text" id="emergencyContact" name="emergencyContact" placeholder=" " required>
+                    <label for="emergencyContact">Emergency Contact *</label>
+                </div>
+                <div class="form-group full-width">
+                    <textarea id="medicalInfo" name="medicalInfo" placeholder=" "></textarea>
+                    <label for="medicalInfo">Medical Information</label>
+                </div>
+            </div>
+            <button type="submit" class="submit-btn">Register for Team 🏀</button>
+           
+        </form>
+    </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <!-- head info -->
+    <div class="footer-info">
+      <h3>🏀 Basketball Team Coordinator</h3>
+      <p><strong>Name:</strong> Arjun Kapoor</p>
+      <p><strong>Phone:</strong> +91 98765 43210</p>
+      <p><strong>Email:</strong> arjun.kapoor@chitkara.edu.in</p>
+    </div>
+
+   <!-- socials -->
+    <div class="footer-social">
+      <h3>Connect with Chitkara University</h3>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/school/chitkara-university/" target="_blank" class="linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://www.instagram.com/chitkarau?igsh=M2V0cWozYmhxbDEw" target="_blank" class="instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://youtube.com/@chitkarauniversity?si=LVkoB_d80E0_aqfu" target="_blank" class="youtube">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</body> 
+</html>
