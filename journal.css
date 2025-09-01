@@ -10,9 +10,9 @@ body {
 	text-align: center;
 	font-size: 2.2rem;
 	color: #fff;
-	background: #c62828;
+	background: #621414;
 	margin: 40px auto 30px auto;
-	font-family: 'Arial', sans-serif;
+	font-family: 'Times New Roman', sans-serif;
 	letter-spacing: 1px;
 	border-radius: 12px;
 	box-shadow: 0 2px 8px rgba(0,0,0,0.08);
@@ -26,7 +26,7 @@ body {
 
 .footer {
 	width: 100vw;
-	background: #c62828;
+	background: #621414;
 	color: #fff;
 	text-align: center;
 	padding: 24px 0 18px 0;
