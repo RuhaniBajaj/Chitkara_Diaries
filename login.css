@@ -1,6 +1,6 @@
 :root {
-    --primary: #621414; /* Changed from blue to your dark red */
-    --primary-dark: #4e0f0f; /* Darker shade of your red */
+    --primary: #621414;
+    --primary-dark: #4e0f0f;
     --text: #333;
     --light-text: #64748b;
     --dark-bg: #1e293b;
@@ -18,13 +18,13 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: var(--text);
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); /* Same as homepage */
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
 }
 
 /* Navbar */
 .navbar {
-    background: rgba(255, 255, 255, 0.95); /* Same as homepage */
-    backdrop-filter: blur(10px); /* Added blur effect like homepage */
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
     position: fixed; top: 0; left: 0; right: 0;
     z-index: 1000;
     box-shadow: var(--shadow-sm);
@@ -53,7 +53,7 @@ body {
 }
 
 .nav-link:hover { 
-    background: rgba(98, 20, 20, 0.1); /* Your brand color with transparency */
+    background: rgba(98, 20, 20, 0.1);
     color: var(--primary); 
 }
 
@@ -129,12 +129,17 @@ body {
     display: flex; align-items: center; justify-content: center;
 }
 
-.form-container { width: 100%; max-width: 380px; margin: auto; }
+.form-container { 
+    width: 100%; 
+    max-width: 380px; 
+    margin: auto; 
+    /* Removed conflicting styles from here */
+}
 .form-header { text-align: center; margin-bottom: 1rem; }
 
 .form-header h2 {
     font-size: 1.6rem; font-weight: 700; 
-    color: var(--dark-bg); /* Same as homepage */
+    color: var(--dark-bg);
 }
 
 .form-header p { font-size: 0.9rem; color: var(--light-text); }
@@ -149,31 +154,41 @@ body {
 
 .input-wrapper { position: relative; }
 
-.input-wrapper i {
-    position: absolute; left: 10px; top: 50%; transform: translateY(-50%);
-    color: var(--light-text); font-size: 0.85rem;
+/* --- UPDATED ICON RULE --- */
+/* Changed 'i' to '> i' (direct child selector) */
+/* This stops it from styling the password's 'eye' icon */
+.input-wrapper > i {
+    position: absolute; 
+    left: 12px; 
+    top: 50%; 
+    transform: translateY(-50%);
+    color: var(--light-text); 
+    font-size: 0.85rem;
     transition: var(--transition);
 }
 
 .input-wrapper input,
 .input-wrapper select {
     width: 100%;
-    padding: 9px 9px 9px 32px;
-    border: 2px solid #e2e8f0; border-radius: 6px;
+    padding: 9px 9px 9px 36px; /* 36px left padding for icon */
+    border: 2px solid #e2e8f0; 
+    border-radius: 6px;
     font-size: 0.85rem;
     transition: var(--transition);
+    /* Removed conflicting padding/border styles from end of file */
 }
 
 .input-wrapper input:focus,
 .input-wrapper select:focus {
-    border-color: var(--primary); /* Your brand color for focus */
-    box-shadow: 0 0 0 2px rgba(98, 20, 20, 0.15); /* Your brand color shadow */
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(98, 20, 20, 0.15);
     outline: none;
 }
 
+/* This now correctly targets only the left icons */
 .input-wrapper input:focus + i,
 .input-wrapper select:focus + i {
-    color: var(--primary); /* Icon changes to your brand color */
+    color: var(--primary);
 }
 
 .input-wrapper input:valid:not(:placeholder-shown),
@@ -182,21 +197,8 @@ body {
     box-shadow: 0 0 0 2px rgba(16,185,129,0.15);
 }
 
-/* Password Toggle */
-.password-wrapper { position: relative; }
-.password-wrapper input { padding-right: 36px; }
-
-.password-toggle {
-    position: absolute; right: 10px; top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer; font-size: 0.85rem;
-    color: var(--light-text); transition: var(--transition);
-}
-
-.password-toggle:hover { color: var(--primary); }
 
 /* Button */
-/* Button - Simplified */
 .login-btn {
     width: 100%;
     background: linear-gradient(135deg, #2d0a0a 0%, #621414 30%, #b22222 70%, #dc143c 100%);
@@ -225,6 +227,32 @@ body {
     transform: translateY(0);
 }
 
+/* PASSWORD CONTAINER */
+.password-wrapper {
+  position: relative;
+}
+.password-wrapper input {
+  width: 100%;
+  padding-right: 40px; /* Adds space for icon */
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: var(--light-text);
+  transition: color 0.3s ease;
+  font-size: 0.9rem;
+}
+.password-toggle:hover {
+  color: var(--primary);
+}
+.password-toggle i {
+  font-size: 1rem;
+}
+
 
 /* Footer */
 .form-footer {
@@ -235,13 +263,13 @@ body {
 }
 
 .form-footer a {
-    color: var(--primary); /* Your brand color for links */
+    color: var(--primary);
     text-decoration: none; font-weight: 500;
 }
 
 .form-footer a:hover { 
     text-decoration: underline; 
-    color: var(--primary-dark); /* Darker shade on hover */
+    color: var(--primary-dark);
 }
 
 /* Responsive */
@@ -256,3 +284,78 @@ body {
     .hero-content h1 { font-size: 1.7rem; }
     .form-header h2 { font-size: 1.4rem; }
 }
+
+/* --- UPDATED LOADER & ERROR STYLES --- */
+.loader-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(255,255,255,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}
+.loader-overlay.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+.loader-logo {
+  width: 80px;
+  animation: spin 1.2s linear infinite;
+}
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+.loader-text {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #621414;
+  font-weight: bold;
+}
+
+/* Error message */
+.error-message {
+  color: var(--error);
+  font-size: 0.9rem;
+  min-height: 20px;
+  margin-top: -10px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* --- UPDATED TAB NAVIGATION (TOGGLE SWITCH) --- */
+.tab-nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 22px;
+  background: #eee;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.tab-nav button {
+  flex: 1; /* Makes buttons equal width */
+  padding: 9px 25px;
+  margin: 0; /* Removed margin */
+  background: transparent; /* Inactive buttons are clear */
+  border: none;
+  border-radius: 6px; /* Rounded corners for the "slider" */
+  font-weight: 600;
+  color: #621414; /* Inactive text color */
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.tab-nav button.active {
+  background: #621414; /* Active button background */
+  color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* --- REMOVED CONFLICTING RULES --- */
+/* Deleted the duplicate/conflicting .input-icon, input[type=...], 
+   and .toggle-password rules from the end of the original file */
