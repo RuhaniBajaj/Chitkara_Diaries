@@ -1,5 +1,5 @@
 /* Reset and base layout */
-:root { --nav-h: 72px; }
+:root { --nav-h: 72px; --page-gap: 1cm; }
 * { box-sizing: border-box; }
 html, body { height: 100%; }
 body {
@@ -31,14 +31,20 @@ body {
 	position: relative;
 	/* Fills remaining space from grid row */
 	min-height: 0; /* allow shrinking within grid */
+	padding: var(--page-gap);
+	display: grid;
+	place-items: center; /* center the image block with equal space around */
 	margin: 0;
 }
 
+.hero__stage { position: relative; display: inline-block; max-width: 100%; max-height: 100%; }
+
 .hero__image {
-	width: 100%;
-	height: 100%;
-	object-fit: cover; /* fill entire area while preserving aspect ratio */
 	display: block;
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
 	filter: saturate(1.02);
 }
 
