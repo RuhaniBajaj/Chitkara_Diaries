@@ -3,13 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student Login</title>
+  <title>Student Login & Register</title>
   <link rel="stylesheet" href="login.css">
-  <link rel="stylesheet" href="navbar.css"
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="navbar.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <!-- Navbar -->
   <nav class="navbar">
         <div class="navbar-left">
             <img src="" alt="Chitkara" class="navbar-logo">
@@ -25,11 +23,9 @@
         </div>
     </nav>
 
-  <!-- Login Container -->
   <div class="login-container">
     <div class="login-wrapper">
 
-      <!-- Hero Section -->
       <div class="login-hero">
         <div class="hero-content">
           <h1>Campus Journey Begins Here</h1>
@@ -51,16 +47,48 @@
         </div>
       </div>
 
-      <!-- Form Section -->
       <div class="login-form-section">
         <div class="form-container">
-          <div class="form-header">
-            <h2>Student Login</h2>
-            <p>Enter your details to access your account</p>
+
+          <div class="tab-nav">
+            <button id="showLoginBtn" class="active">Login</button>
+            <button id="showRegisterBtn">Register</button>
           </div>
 
-          <form class="login-form" action="homepage.html" method="GET">
-            <!-- Full Name -->
+          <form class="login-form" id="loginForm">
+            <div class="form-header">
+              <h2>Student Login</h2>
+              <p>Enter your details to access your account</p>
+            </div>
+            
+            <div class="form-group">
+              <label for="login-identifier">Email or Roll Number</label>
+              <div class="input-wrapper">
+                <i class="fas fa-user"></i>
+                <input type="text" id="login-identifier" name="identifier" placeholder="Enter your email or roll no" required>
+              </div>
+            </div>
+
+            <div class="form-group password-wrapper">
+              <label for="login-password">Password</label>
+              <div class="input-wrapper">
+                <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
+                <span class="password-toggle" onclick="togglePassword('login-password', 'login-eyeIcon')">
+                  <i id="login-eyeIcon" class="fa fa-eye"></i>
+                </span>
+              </div>
+            </div>
+
+            <div id="login-error-message" class="error-message"></div>
+            <button type="submit" class="login-btn">Login to Chitkara Diaries</button>
+          </form>
+
+          <form class="login-form" id="registerForm" style="display: none;">
+            <div class="form-header">
+              <h2>Create Account</h2>
+              <p>Sign up to get started</p>
+            </div>
+
             <div class="form-group">
               <label for="fullname">Full Name</label>
               <div class="input-wrapper">
@@ -69,7 +97,6 @@
               </div>
             </div>
 
-            <!-- Roll Number -->
             <div class="form-group">
               <label for="roll">Roll Number</label>
               <div class="input-wrapper">
@@ -78,22 +105,20 @@
               </div>
             </div>
 
-            <!-- Batch Year -->
             <div class="form-group">
               <label for="batch">Batch Year</label>
               <div class="input-wrapper">
                 <i class="fas fa-calendar"></i>
                 <select id="batch" name="batch" required>
                   <option value="" disabled selected>Select batch year</option>
-                  <option value="2020">2020</option>
                   <option value="2021">2021</option>
                   <option value="2022">2022</option>
                   <option value="2023">2023</option>
+                  <option value="2024">2024</option>
                 </select>
               </div>
             </div>
 
-            <!-- Course -->
             <div class="form-group">
               <label for="course">Course</label>
               <div class="input-wrapper">
@@ -108,7 +133,6 @@
               </div>
             </div>
 
-            <!-- Email -->
             <div class="form-group">
               <label for="email">Email Address</label>
               <div class="input-wrapper">
@@ -117,23 +141,167 @@
               </div>
             </div>
 
-            <!-- Password -->
             <div class="form-group password-wrapper">
-              <label for="password">Password</label>
+              <label for="register-password">Password</label>
               <div class="input-wrapper">
-                <i class="fas fa-lock"></i>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <input type="password" id="register-password" name="password" placeholder="Create your password" required>
+                <span class="password-toggle" onclick="togglePassword('register-password', 'register-eyeIcon')">
+                  <i id="register-eyeIcon" class="fa fa-eye"></i>
+                </span>
               </div>
             </div>
 
-            <!-- Login Button -->
-            <button type="submit" class="login-btn">Login to Chitkara Diaries</button>
-
+            <div id="register-error-message" class="error-message"></div>
+            <button type="submit" class="login-btn">Create Account</button>
           </form>
+
         </div>
       </div>
-
     </div>
   </div>
+
+  <div id="loader" class="loader-overlay" style="display: none;">
+    <img src="chitkara.jpg" alt="Loading..." class="loader-logo" />
+    <div id="loader-text" class="loader-text">Logging you in...</div>
+  </div>
+
+  <script>
+    // --- Reusable Password Toggle ---
+    function togglePassword(fieldId, iconId) {
+      const pwField = document.getElementById(fieldId);
+      const icon = document.getElementById(iconId);
+      if (pwField.type === "password") {
+        pwField.type = "text";
+        icon.classList.replace("fa-eye", "fa-eye-slash");
+      } else {
+        pwField.type = "password";
+        icon.classList.replace("fa-eye-slash", "fa-eye");
+      }
+    }
+
+    // --- DOM Elements ---
+    const loginForm = document.getElementById('loginForm');
+    const registerForm = document.getElementById('registerForm');
+    const showLoginBtn = document.getElementById('showLoginBtn');
+    const showRegisterBtn = document.getElementById('showRegisterBtn');
+    const loader = document.getElementById('loader');
+    const loaderText = document.getElementById('loader-text');
+    const loginErrorBox = document.getElementById('login-error-message');
+    const registerErrorBox = document.getElementById('register-error-message');
+
+    // --- Tab Switching Logic ---
+    showLoginBtn.addEventListener('click', () => {
+      loginForm.style.display = 'block';
+      registerForm.style.display = 'none';
+      showLoginBtn.classList.add('active');
+      showRegisterBtn.classList.remove('active');
+      loginErrorBox.textContent = '';
+      registerErrorBox.textContent = '';
+    });
+
+    showRegisterBtn.addEventListener('click', () => {
+      loginForm.style.display = 'none';
+      registerForm.style.display = 'block';
+      showLoginBtn.classList.remove('active');
+      showRegisterBtn.classList.add('active');
+      loginErrorBox.textContent = '';
+      registerErrorBox.textContent = '';
+    });
+
+    // --- Login Form Handler ---
+    loginForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const identifier = document.getElementById('login-identifier').value.trim();
+      const password = document.getElementById('login-password').value.trim();
+
+      if (!identifier || !password) {
+        loginErrorBox.textContent = 'Please enter both fields.';
+        return;
+      }
+
+      loaderText.textContent = 'Logging you in...';
+      loader.style.display = 'flex';
+      loginErrorBox.textContent = '';
+
+      fetch('http://localhost:3000/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ identifier, password })
+      })
+      .then(res => res.json())
+      .then(data => {
+        setTimeout(() => { // Simulate loading time
+          loader.style.display = 'none';
+          if (data.success) {
+            window.location.href = 'homepage.html';
+          } else {
+            loginErrorBox.textContent = data.message;
+          }
+        }, 1000);
+      })
+      .catch(() => {
+        loader.style.display = 'none';
+        loginErrorBox.textContent = 'Server error. Please try again later.';
+      });
+    });
+
+    // --- Register Form Handler ---
+    registerForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const formData = {
+        fullname: document.getElementById('fullname').value.trim(),
+        roll: document.getElementById('roll').value.trim(),
+        batch: document.getElementById('batch').value,
+        course: document.getElementById('course').value,
+        email: document.getElementById('email').value.trim(),
+        password: document.getElementById('register-password').value.trim()
+      };
+
+      // Basic validation
+      if (Object.values(formData).some(val => !val)) {
+        registerErrorBox.textContent = 'Please fill out all fields.';
+        return;
+      }
+      if (formData.password.length < 6) {
+        registerErrorBox.textContent = 'Password must be at least 6 characters long.';
+        return;
+      }
+      if (!/^[^@]+@[^@]+\.[^@]+$/.test(formData.email)) {
+        registerErrorBox.textContent = 'Enter a valid email address.';
+        return;
+      }
+
+      loaderText.textContent = 'Creating your account...';
+      loader.style.display = 'flex';
+      registerErrorBox.textContent = '';
+
+      fetch('http://localhost:3000/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      })
+      .then(res => res.json())
+      .then(data => {
+        setTimeout(() => { // Simulate loading time
+          loader.style.display = 'none';
+          if (data.success) {
+            // Success! Switch to login tab and show a message
+            showLoginBtn.click(); // Programmatically click the login tab
+            loginErrorBox.textContent = data.message; // Show "Registration successful!"
+            loginErrorBox.style.color = 'var(--success)';
+          } else {
+            registerErrorBox.textContent = data.message;
+            registerErrorBox.style.color = 'var(--error)';
+          }
+        }, 1000);
+      })
+      .catch(() => {
+        loader.style.display = 'none';
+        registerErrorBox.textContent = 'Server error. Please try again later.';
+      });
+    });
+  </script>
 </body>
 </html>
