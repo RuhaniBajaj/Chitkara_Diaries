@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 <body>
     <!-- Top anchor for home button -->
@@ -51,72 +53,8 @@
     <!-- Interactive Campus Map Section (CSS-only version) -->
     <section class="map-section" id="campus-map">
         <div class="container">
-            <div class="section-header">
-                <h2>Campus Locations</h2>
-                <p>Explore our favorite student locations</p>
-            </div>
-            
-            <!-- CSS-only Interactive Map -->
-            <div class="css-map-container">
-                <!-- Map Background -->
-                <div class="campus-map-bg">
-                    <!-- Location Cards that act as map pins -->
-                    <div class="map-location library" data-location="Library">
-                        <div class="location-pin">
-                            <span class="pin-icon">📚</span>
-                            <div class="location-popup">
-                                <h4>Central Library</h4>
-                                <p>24/7 Study Hub with 500K+ books</p>
-                                <a href="pages/locations/library.html" class="popup-btn">Explore</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="map-location cafeteria" data-location="Cafeteria">
-                        <div class="location-pin">
-                            <span class="pin-icon">🍽️</span>
-                            <div class="location-popup">
-                                <h4>Square One</h4>
-                                <p>Fresh meals & social space</p>
-                                <a href="pages/locations/cafeteria.html" class="popup-btn">Explore</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="map-location labs" data-location="Labs">
-                        <div class="location-pin">
-                            <span class="pin-icon">🔬</span>
-                            <div class="location-popup">
-                                <h4>Research Labs</h4>
-                                <p>State-of-the-art facilities</p>
-                                <a href="pages/locations/labs.html" class="popup-btn">Explore</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="map-location sports" data-location="Sports">
-                        <div class="location-pin">
-                            <span class="pin-icon">⚽</span>
-                            <div class="location-popup">
-                                <h4>Sportorium</h4>
-                                <p>Fitness & recreation center</p>
-                                <a href="pages/locations/sports.html" class="popup-btn">Explore</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- <div class="map-location auditorium" data-location="Auditorium">
-                        <div class="location-pin">
-                            <span class="pin-icon">🎭</span>
-                            <div class="location-popup">
-                                <h4>Main Auditorium</h4>
-                                <p>Events & performances venue</p>
-                                <a href="pages/locations/auditorium.html" class="popup-btn">Explore →</a>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
-            </div>
+            <h2>Campus Locations</h2>
+                <div id="campusMap"></div>
             
             <!-- Quick Location Access Cards -->
             <div class="quick-locations">
@@ -152,7 +90,7 @@
                         </div>
                     </a>
                     
-                    <a href="pages/locations/sports.html" class="location-card">
+                    <a href="viva1.html" class="location-card">
                         <div class="card-icon">
                             <i class="fas fa-dumbbell"></i>
                         </div>
@@ -289,8 +227,8 @@
                     <ul>
                         <li><a href="#top">Home</a></li>
                         <li><a href="#about-us-section">About Us</a></li>
-                        <li><a href="pages/clubs.html">Clubs</a></li>
-                        <li><a href="pages/journal.html">Journal</a></li>
+                        <li><a href="club_page.html">Clubs</a></li>
+                        <li><a href="journal.html">Journal</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -315,4 +253,43 @@
         </div>
     </footer>
 </body>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var map = L.map('campusMap').setView([30.516, 76.659], 16);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Locations with Explore More link (target URLs per location)
+    var places = [
+      { name: 'Square One', coords: [30.515096756792865, 76.65983395294342], url: 'pages/locations/library.html' },
+      { name: 'Exploritorium', coords: [30.51588372459271, 76.65706749471194], url: 'pages/locations/cafeteria.html' },
+      { name: 'Turing Block', coords: [30.51655863904981, 76.66054893111689], url: 'pages/locations/labs.html' },
+      { name: 'Sporitorium', coords: [30.5158, 76.658], url: 'pages/locations/auditorium.html' },
+      { name: 'Central Library', coords: [30.515835813670343, 76.66052101098123], url: 'pages/locations/sports.html' }
+    ];
+    places.forEach(function (place) {
+      var popupContent = `
+        <div style="min-width:160px;">
+          <b>${place.name}</b><br>
+          <a href="${place.url}" style="display:inline-block;margin-top:8px;color:#621414;text-decoration:underline;" target="_blank">
+            Explore More &rarr;
+          </a>
+        </div>
+      `;
+      L.marker(place.coords)
+        .addTo(map)
+        .bindPopup(popupContent);
+
+        // Ensure the map resizes correctly when window size changes
+window.addEventListener('resize', function () {
+  if (map) {
+    map.invalidateSize();
+  }
+});
+
+    });
+  });
+</script>
 </html>
