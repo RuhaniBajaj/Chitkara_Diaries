@@ -11,7 +11,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background-color: #c62828;
+    background-color: #621414;
     color: white;
 }
 
@@ -38,7 +38,7 @@ body {
 /* Page Heading */
 
 .page-header {
-    background-color: #ef5350;
+    background-color: #621414;
     color: white;
     text-align: center;
     padding: 50px 20px;
@@ -59,7 +59,7 @@ body {
 
 .club-section h2 {
     margin-bottom: 20px;
-    color: #c62828;
+    color: #621414;
     border-bottom: 2px solid #eee;
     display: inline-block;
 }
@@ -116,7 +116,7 @@ body {
     margin-top: auto;
     margin-bottom: 0;
     padding: 6px 18px;
-    background-color: #c62828;
+    background-color:#621414;
     color: #fff;
     border-radius: 20px;
     font-size: 13px;
