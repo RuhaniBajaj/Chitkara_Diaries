@@ -1,13 +1,13 @@
 const express = require("express");
 const fs = require("fs");
 const cors = require("cors");
-const bodyParser = require("body-parser");
 
 const app = express();
 app.use(cors());
-app.use(bodyParser.json());
+app.use(express.json());
 
-const usersFilePath = "users.json";
+const usersFilePath = "./users.json";
+
 
 // Helper function to read users
 const getUsers = () => {
