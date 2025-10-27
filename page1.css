@@ -17,14 +17,20 @@ body {
 
 .place-header {
 	padding: 16px 24px 8px;
-	background: transparent;
+	background: #fff;
 }
 
 .place-heading {
 	margin: 8px 0 12px;
 	color: #fff;
-	font-size: 2rem;
+	font-size: 2.2rem;
 	letter-spacing: 0.5px;
+	background: #800000;
+	padding: 10px 36px;
+	border-radius: 16px;
+	box-shadow: 0 2px 12px rgba(128,0,0,0.08);
+	text-align: center;
+	font-weight: 700;
 }
 
 .hero {
@@ -37,14 +43,27 @@ body {
 	margin: 0;
 }
 
-.hero__stage { position: relative; display: inline-block; max-width: 100%; max-height: 100%; }
+.hero__stage {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	max-width: 100%;
+	max-height: 100%;
+}
 
 .hero__image {
 	display: block;
-	width: auto;
-	height: auto;
+	width: calc(100vw - 2cm);
+	height: calc(100vh - var(--nav-h) - 2cm);
 	max-width: 100%;
 	max-height: 100%;
+	object-fit: contain;
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 2px 16px rgba(0,0,0,0.07);
 	filter: saturate(1.02);
 }
 
@@ -93,7 +112,6 @@ body {
 .tooltip {
 	position: absolute;
 	left: 50%;
-	transform: translate(-50%, -112%);
 	min-width: 260px;
 	max-width: 360px;
 	background: rgba(0,0,0,0.9);
@@ -105,6 +123,40 @@ body {
 	visibility: hidden;
 	pointer-events: none;
 	transition: opacity .2s ease, transform .2s ease;
+}
+
+/* Tooltip appears above (default) */
+.hotspot--above .tooltip {
+	bottom: 100%;
+	top: auto;
+	transform: translate(-50%, -16px);
+}
+.hotspot--above .tooltip::after {
+	content: "";
+	position: absolute;
+	bottom: -7px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-width: 7px;
+	border-style: solid;
+	border-color: rgba(0,0,0,0.88) transparent transparent transparent;
+}
+
+/* Tooltip appears below */
+.hotspot--below .tooltip {
+	top: 100%;
+	bottom: auto;
+	transform: translate(-50%, 16px);
+}
+.hotspot--below .tooltip::after {
+	content: "";
+	position: absolute;
+	top: -14px;
+	left: 50%;
+	transform: translateX(-50%) rotate(180deg);
+	border-width: 7px;
+	border-style: solid;
+	border-color: rgba(0,0,0,0.88) transparent transparent transparent;
 }
 
 .tooltip::after {
@@ -144,7 +196,6 @@ body {
 .hotspot:focus-within .tooltip {
 	opacity: 1;
 	visibility: visible;
-	transform: translate(-50%, -125%);
 	pointer-events: auto;
 }
 

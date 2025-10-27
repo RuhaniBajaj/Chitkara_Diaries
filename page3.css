@@ -1,0 +1,4 @@
+/* Page 3 styles: inherit base styles from page1.css */
+@import url("page1.css");
+
+/* Add page-specific overrides below if needed */

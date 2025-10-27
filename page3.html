@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Square Three — Location Details</title>
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="page3.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-left">
+        <img src="images/OSC.png" alt="Chitkara Logo" class="navbar-logo" />
+        <span class="navbar-title">Chitkara Diaries</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="journal.html">Journal</a></li>
+        <li><a href="voting_pg.html">Popular</a></li>
+        <li><a href="club_page.html">Clubs</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="login.html">Log In</a></li>
+      </ul>
+    </nav>
+
+    <main class="location-page" aria-label="Location details with interactive hotspots">
+      <header class="place-header">
+        <h1 class="place-heading">Square Three</h1>
+      </header>
+      <figure class="hero">
+        <div class="hero__stage">
+          <img src="square_one.jpg" alt="Square Three" class="hero__image" />
+          <figcaption class="sr-only">Interactive hotspots indicating points of interest</figcaption>
+
+          <div class="hotspot hotspot--below" style="--x: 12%; --y: 18%;">
+            <button class="pin" aria-describedby="tip-1" aria-label="Chai Nagri">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="pin__icon"><path fill="currentColor" d="M12 2c3.31 0 6 2.53 6 5.65 0 3.78-4.33 9.05-5.35 10.23a.85.85 0 0 1-1.3 0C10.33 16.7 6 11.43 6 7.65 6 4.53 8.69 2 12 2Zm0 3a2.65 2.65 0 1 0 0 5.3A2.65 2.65 0 0 0 12 5Z"/></svg>
+            </button>
+            <div class="tooltip" role="tooltip" id="tip-1">
+              <img class="tooltip__img" src="chai_nagri.jpg" alt="Chai Nagri" loading="lazy" />
+              <h3>Chai Nagri</h3>
+              <p>For your snack cravings be it rolls, sandwiches or a good cold coffee.</p>
+            </div>
+          </div>
+
+          <div class="hotspot hotspot--below" style="--x: 85%; --y: 22%;">
+            <button class="pin" aria-describedby="tip-2" aria-label="South Circle">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="pin__icon"><path fill="currentColor" d="M12 2c3.31 0 6 2.53 6 5.65 0 3.78-4.33 9.05-5.35 10.23a.85.85 0 0 1-1.3 0C10.33 16.7 6 11.43 6 7.65 6 4.53 8.69 2 12 2Zm0 3a2.65 2.65 0 1 0 0 5.3A2.65 2.65 0 0 0 12 5Z"/></svg>
+            </button>
+            <div class="tooltip" role="tooltip" id="tip-2">
+              <img class="tooltip__img" src="south_circle.jpg" alt="South Circle" loading="lazy" />
+              <h3>South Circle</h3>
+              <p>The south indian in you comes to life, the best and most affordable dosas.</p>
+            </div>
+          </div>
+
+          <div class="hotspot hotspot--above" style="--x: 22%; --y: 78%;">
+            <button class="pin" aria-describedby="tip-3" aria-label="House of Kulcha">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="pin__icon"><path fill="currentColor" d="M12 2c3.31 0 6 2.53 6 5.65 0 3.78-4.33 9.05-5.35 10.23a.85.85 0 0 1-1.3 0C10.33 16.7 6 11.43 6 7.65 6 4.53 8.69 2 12 2Zm0 3a2.65 2.65 0 1 0 0 5.3A2.65 2.65 0 0 0 12 5Z"/></svg>
+            </button>
+            <div class="tooltip" role="tooltip" id="tip-3">
+              <img class="tooltip__img" src="house_of_kulcha.jpg" alt="House of Kulcha" loading="lazy" />
+              <h3>House of Kulcha</h3>
+              <p>The love of amritsari kulcha, must not miss the special aloo kulcha with extra butter.</p>
+            </div>
+          </div>
+
+          <div class="hotspot hotspot--above" style="--x: 78%; --y: 70%;">
+            <button class="pin" aria-describedby="tip-4" aria-label="Keventers">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="pin__icon"><path fill="currentColor" d="M12 2c3.31 0 6 2.53 6 5.65 0 3.78-4.33 9.05-5.35 10.23a.85.85 0 0 1-1.3 0C10.33 16.7 6 11.43 6 7.65 6 4.53 8.69 2 12 2Zm0 3a2.65 2.65 0 1 0 0 5.3A2.65 2.65 0 0 0 12 5Z"/></svg>
+            </button>
+            <div class="tooltip" role="tooltip" id="tip-4">
+              <img class="tooltip__img" src="keventers.jpg" alt="Keventers" loading="lazy" />
+              <h3>Keventers</h3>
+              <p>Waffles, shakes or ice creams we have it all for your cravings.</p>
+            </div>
+          </div>
+        </div>
+      </figure>
+    </main>
+  </body>
+</html>
