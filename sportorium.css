@@ -1,4 +1,4 @@
-/* Reset and base layout */
+/* Copied from page1.css to make page3 standalone */
 :root { --nav-h: 72px; --page-gap: 1cm; }
 * { box-sizing: border-box; }
 html, body { height: 100%; }
@@ -41,18 +41,14 @@ body {
 	display: grid;
 	place-items: center; /* center the image block with equal space around */
 	margin: 0;
-	background: #800000; /* maroon container behind the image */
+    background: #800000;
 }
 
 .hero__stage {
 	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	height: 100%;
-	max-width: 100%;
-	max-height: 100%;
+	display: inline-block; /* shrink-wrap to image size */
+	width: auto;
+	height: auto;
 }
 
 .hero__image {
@@ -62,7 +58,7 @@ body {
 	max-width: 100%;
 	max-height: 100%;
 	object-fit: contain;
-	background: transparent; /* no white letterbox; show maroon behind */
+	background: transparent;
 	border-radius: 0;
 	box-shadow: none;
 	filter: saturate(1.02);
@@ -208,3 +204,8 @@ body {
 	.tooltip { min-width: 220px; max-width: 300px; }
 	.tooltip__img { height: 120px; }
 }
+
+
+
+
+

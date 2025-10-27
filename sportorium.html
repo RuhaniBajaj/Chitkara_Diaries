@@ -3,12 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Square Two — Location Details</title>
+  <title>Sportorium — Location Details</title>
   <link rel="stylesheet" href="navbar.css" />
-  <link rel="stylesheet" href="page2.css" />
+  <link rel="stylesheet" href="sportorium.css" />
   </head>
   <body>
-    <!-- Site Navbar -->
     <nav class="navbar">
       <div class="navbar-left">
         <img src="images/OSC.png" alt="Chitkara Logo" class="navbar-logo" />
@@ -26,20 +25,16 @@
 
     <main class="location-page" aria-label="Location details with interactive hotspots">
       <header class="place-header">
-        <h1 class="place-heading">Square Two</h1>
+        <h1 class="place-heading">Sportorium</h1>
       </header>
       <figure class="hero">
         <div class="hero__stage">
-          <!-- Main image for the location (Square Two) -->
-          <img src="square_one.jpg" alt="Square Two" class="hero__image" />
+          <img src="sportorium.jpg" alt="Sportorium" class="hero__image" />
           <figcaption class="sr-only">Interactive hotspots indicating points of interest</figcaption>
 
-          <!-- Hotspot 1 -->
           <div class="hotspot hotspot--below" style="--x: 12%; --y: 18%;">
             <button class="pin" aria-describedby="tip-1" aria-label="Chai Nagri">
-              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="pin__icon">
-                <path fill="currentColor" d="M12 2c3.31 0 6 2.53 6 5.65 0 3.78-4.33 9.05-5.35 10.23a.85.85 0 0 1-1.3 0C10.33 16.7 6 11.43 6 7.65 6 4.53 8.69 2 12 2Zm0 3a2.65 2.65 0 1 0 0 5.3A2.65 2.65 0 0 0 12 5Z"/>
-              </svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="pin__icon"><path fill="currentColor" d="M12 2c3.31 0 6 2.53 6 5.65 0 3.78-4.33 9.05-5.35 10.23a.85.85 0 0 1-1.3 0C10.33 16.7 6 11.43 6 7.65 6 4.53 8.69 2 12 2Zm0 3a2.65 2.65 0 1 0 0 5.3A2.65 2.65 0 0 0 12 5Z"/></svg>
             </button>
             <div class="tooltip" role="tooltip" id="tip-1">
               <img class="tooltip__img" src="chai_nagri.jpg" alt="Chai Nagri" loading="lazy" />
@@ -48,12 +43,9 @@
             </div>
           </div>
 
-          <!-- Hotspot 2 -->
           <div class="hotspot hotspot--below" style="--x: 85%; --y: 22%;">
             <button class="pin" aria-describedby="tip-2" aria-label="South Circle">
-              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="pin__icon">
-                <path fill="currentColor" d="M12 2c3.31 0 6 2.53 6 5.65 0 3.78-4.33 9.05-5.35 10.23a.85.85 0 0 1-1.3 0C10.33 16.7 6 11.43 6 7.65 6 4.53 8.69 2 12 2Zm0 3a2.65 2.65 0 1 0 0 5.3A2.65 2.65 0 0 0 12 5Z"/>
-              </svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="pin__icon"><path fill="currentColor" d="M12 2c3.31 0 6 2.53 6 5.65 0 3.78-4.33 9.05-5.35 10.23a.85.85 0 0 1-1.3 0C10.33 16.7 6 11.43 6 7.65 6 4.53 8.69 2 12 2Zm0 3a2.65 2.65 0 1 0 0 5.3A2.65 2.65 0 0 0 12 5Z"/></svg>
             </button>
             <div class="tooltip" role="tooltip" id="tip-2">
               <img class="tooltip__img" src="south_circle.jpg" alt="South Circle" loading="lazy" />
@@ -62,12 +54,9 @@
             </div>
           </div>
 
-          <!-- Hotspot 3 -->
           <div class="hotspot hotspot--above" style="--x: 22%; --y: 78%;">
             <button class="pin" aria-describedby="tip-3" aria-label="House of Kulcha">
-              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="pin__icon">
-                <path fill="currentColor" d="M12 2c3.31 0 6 2.53 6 5.65 0 3.78-4.33 9.05-5.35 10.23a.85.85 0 0 1-1.3 0C10.33 16.7 6 11.43 6 7.65 6 4.53 8.69 2 12 2Zm0 3a2.65 2.65 0 1 0 0 5.3A2.65 2.65 0 0 0 12 5Z"/>
-              </svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="pin__icon"><path fill="currentColor" d="M12 2c3.31 0 6 2.53 6 5.65 0 3.78-4.33 9.05-5.35 10.23a.85.85 0 0 1-1.3 0C10.33 16.7 6 11.43 6 7.65 6 4.53 8.69 2 12 2Zm0 3a2.65 2.65 0 1 0 0 5.3A2.65 2.65 0 0 0 12 5Z"/></svg>
             </button>
             <div class="tooltip" role="tooltip" id="tip-3">
               <img class="tooltip__img" src="house_of_kulcha.jpg" alt="House of Kulcha" loading="lazy" />
@@ -76,12 +65,9 @@
             </div>
           </div>
 
-          <!-- Hotspot 4 -->
           <div class="hotspot hotspot--above" style="--x: 78%; --y: 70%;">
             <button class="pin" aria-describedby="tip-4" aria-label="Keventers">
-              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="pin__icon">
-                <path fill="currentColor" d="M12 2c3.31 0 6 2.53 6 5.65 0 3.78-4.33 9.05-5.35 10.23a.85.85 0 0 1-1.3 0C10.33 16.7 6 11.43 6 7.65 6 4.53 8.69 2 12 2Zm0 3a2.65 2.65 0 1 0 0 5.3A2.65 2.65 0 0 0 12 5Z"/>
-              </svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="pin__icon"><path fill="currentColor" d="M12 2c3.31 0 6 2.53 6 5.65 0 3.78-4.33 9.05-5.35 10.23a.85.85 0 0 1-1.3 0C10.33 16.7 6 11.43 6 7.65 6 4.53 8.69 2 12 2Zm0 3a2.65 2.65 0 1 0 0 5.3A2.65 2.65 0 0 0 12 5Z"/></svg>
             </button>
             <div class="tooltip" role="tooltip" id="tip-4">
               <img class="tooltip__img" src="keventers.jpg" alt="Keventers" loading="lazy" />
