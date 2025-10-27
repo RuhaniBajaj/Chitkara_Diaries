@@ -1,0 +1,139 @@
+/* Variable Definitions */
+:root { 
+    --primary: #621414; 
+    --text: #222; 
+    --accent-blue: #0b66ff;
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.07); 
+    --transition: all 0.22s cubic-bezier(.4,0,.2,1); 
+} 
+
+/* Base Styles */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; } 
+body { min-height: 100vh; background: #f4f6f9; } 
+html { scroll-behavior: smooth; } 
+
+/* === Navbar Styles === */ 
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; background-color: var(--primary); color: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1100; } 
+.navbar-left { display: flex; align-items: center; gap: 12px; } 
+.navbar-logo { width: 40px; height: 40px; object-fit: contain; border-radius: 50%; background: white; } 
+.navbar-title { font-size: 22px; font-weight: bold; color: white; letter-spacing: 1px; } 
+.nav-links { list-style: none; display: flex; gap: 24px; margin: 0; padding: 0; } 
+.nav-links li a { text-decoration: none; color: white; font-size: 16px; font-weight: 500; padding: 8px 16px; border-radius: 4px; transition: background-color 0.3s ease; } 
+.nav-links li a:hover { background-color: rgba(255, 255, 255, 0.1); color: white; } 
+
+
+/* === Layout Styles === */
+.main { max-width: 1600px; width: 95%; margin: 0 auto; padding: 110px 30px 30px 30px; display: flex; flex-direction: row; gap: 2rem; min-height: 80vh; } 
+.main-content-wrapper { display: flex; flex-direction: row; flex: 1; gap: 2rem; min-width: 0; }
+.questions-grid { display: flex; flex-direction: column; gap: 2.5rem; flex: 1; } 
+.domain-section { margin-bottom: 0.5rem; scroll-margin-top: 110px; } 
+.domain-title { font-size: 1.2rem; font-weight: 700; color: var(--primary); margin-bottom: 0.7rem; margin-left: 0.2rem; letter-spacing: 0.5px; } 
+.domain-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; } 
+
+/* === Card (Question) Styles === */
+.card { background: #fff; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.10); display: flex; flex-direction: column; align-items: stretch; justify-content: space-between; min-width: 210px; min-height: 210px; padding: 18px 14px 18px 14px; transition: transform 0.18s, box-shadow 0.18s; position: relative; word-break: break-word; overflow-wrap: break-word; } 
+.card:hover { transform: translateY(-8px) scale(1.04); box-shadow: 0 12px 32px rgba(98,20,20,0.13); border: 1.5px solid var(--primary); } 
+.card h3 { margin-bottom: 15px; color: #000; font-size: 1rem; text-align: center; word-break: break-word; overflow-wrap: break-word; } 
+.options label { display: block; padding: 8px 12px; margin-bottom: 8px; border-radius: 8px; border: 1px solid #ddd; cursor: pointer; transition: 0.3s; } 
+.options input[type="radio"] { margin-right: 10px; } 
+.options label:hover { background: #ecf0f1; } 
+.submit-btn { background: var(--primary); color: #fff; padding: 10px 20px; border: none; border-radius: 8px; cursor: pointer; transition: 0.3s; margin-top: 10px; font-weight: 600; font-size: 1.05rem; letter-spacing: 0.5px; box-shadow: 0 2px 8px rgba(98,20,20,0.13); align-self: center; max-width: 100%; white-space: normal; } 
+.submit-btn:hover { background: #8a2323; } 
+
+/* --- "Add review" link style REMOVED --- */
+/*
+.add-review-btn {
+    ...
+}
+*/
+
+/* === RESULTS VIEW STYLES === */
+.percentage-option { padding: 12px; margin-bottom: 8px; border-radius: 8px; border: 1px solid #ddd; position: relative; overflow: hidden; display: flex; flex-direction: column; }
+.percentage-option > div:first-child { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 5px; z-index: 2; }
+.percentage-option.most-voted { border-color: var(--accent-blue); background-color: rgba(11,102,255,0.08); }
+.percentage-bar { height: 10px; background-color: #f0f0f0; border-radius: 5px; margin-top: 0; overflow: hidden; position: relative; z-index: 1; }
+.percentage-bar .fill { height: 100%; background-color: var(--accent-blue); transition: width 0.5s ease-out; }
+.percentage-option.most-voted .percentage-bar .fill { background-color: var(--primary); }
+.percentage-option strong { color: var(--text); display: inline-block; margin-right: 5px; }
+.vote-info { margin-top: 8px; font-size: 0.9rem; color: #666; text-align: center; }
+
+/* === Sticky Hamburger Menu Styles === */ 
+.hamburger-menu { width: 190px; min-width: 140px; background: #fff; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.10); display: flex; flex-direction: column; align-items: flex-start; padding: 0 0 18px 0; margin-top: 0.5rem; height: fit-content; position: sticky; top: 90px; align-self: flex-start; } 
+.menu-header { width: 100%; display: flex; align-items: center; gap: 10px; padding: 15px; font-size: 1.2rem; font-weight: bold; color: var(--primary); border-bottom: 1px solid #ddd; margin-bottom: 1rem; } 
+.menu-header i { font-size: 1.4rem; color: var(--primary); } 
+.hamburger-links { display: flex; flex-direction: column; gap: 1.2rem; align-items: flex-start; width: 100%; padding-left: 0.7rem; } 
+.hamburger-link { color: var(--primary); font-size: 1.08rem; text-decoration: none; display: flex; flex-direction: row; align-items: center; gap: 0.7em; width: 100%; padding: 0.3em 0.5em 0.3em 0.2em; border-radius: 8px; transition: color 0.18s, background 0.18s; } 
+.hamburger-link i { font-size: 1.25em; min-width: 1.5em; text-align: center; color: var(--primary); } 
+.hamburger-link span { font-size: 1em; margin: 0; text-align: left; } 
+.hamburger-link:hover { color: #fff; background: var(--primary); } 
+
+
+/* === Review Panel Styles (🌟 MODIFIED 🌟) === */
+.review-panel { width: 300px; min-width: 280px; align-self: flex-start; position: sticky; top: 90px; height: calc(100vh - 110px); overflow-y: auto; background: #fff; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.10); padding: 0; margin-top: 0.5rem; }
+.review-header {
+    /* 🌟 Changed to flex to align title and button 🌟 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    color: var(--primary);
+    position: sticky; 
+    top: 0;
+    background: #fff;
+    z-index: 10;
+}
+.review-header h3 { font-size: 1.2rem; font-weight: bold; display: flex; align-items: center; gap: 10px; }
+
+/* 🌟 NEW: Style for the button in the header 🌟 */
+.add-review-btn-header {
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background 0.2s;
+}
+.add-review-btn-header:hover {
+    background: #8a2323; /* Darker red */
+}
+.add-review-btn-header i {
+    font-size: 0.8rem;
+}
+
+.review-content { padding: 15px; display: flex; flex-direction: column; gap: 1.2rem; }
+.review-card { background: #f9f9f9; border: 1px solid #eee; border-radius: 8px; padding: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+.review-text { font-size: 0.95rem; color: #333; font-style: italic; margin-bottom: 10px; line-height: 1.4; }
+.review-option, .review-author { font-size: 0.85rem; color: #777; display: block; text-align: right; }
+.review-author { margin-top: 4px; }
+.no-reviews { padding: 20px; text-align: center; color: #888; font-style: italic; }
+
+
+/* === Review Modal (Pop-up) Styles === */
+.modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 2000; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
+.modal-overlay.active { opacity: 1; pointer-events: all; }
+.modal-box { background: #fff; border-radius: 16px; width: 90%; max-width: 500px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); transform: scale(0.9); transition: transform 0.3s ease; }
+.modal-overlay.active .modal-box { transform: scale(1); }
+.modal-header { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; border-bottom: 1px solid #ddd; }
+.modal-header h3 { color: var(--primary); font-size: 1.3rem; }
+.modal-close-btn { font-size: 2rem; font-weight: bold; color: #888; background: none; border: none; cursor: pointer; line-height: 1; }
+.modal-content { padding: 20px; }
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; margin-bottom: 5px; font-weight: 600; color: #333; }
+.form-group input[type="text"], .form-group select, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem; font-family: Arial, sans-serif; }
+.form-group textarea { resize: vertical; min-height: 80px; }
+.modal-submit-btn { width: 100%; font-size: 1.1rem; }
+
+
+/* === Media Queries (Responsiveness) === */ 
+@media (max-width: 1100px) { .main { flex-direction: column; gap: 1.2rem; width: 100%; padding: 90px 2vw 10px 2vw; } .domain-cards { grid-template-columns: 1fr 1fr; } .hamburger-menu { flex-direction: row; width: 100%; min-width: 0; justify-content: flex-start; margin-bottom: 1rem; position: static; top: unset; padding: 10px 0; overflow-x: auto; } .hamburger-links { flex-direction: row; gap: 0.8rem; padding: 0 10px; } .menu-header { border-bottom: none; padding: 0 15px 0 0; margin-bottom: 0; white-space: nowrap; } .review-panel { width: 100%; position: static; height: auto; max-height: 400px; } } 
+@media (max-width: 900px) { .main-content-wrapper { flex-direction: column; gap: 1.2rem; } }
+@media (max-width: 700px) { .domain-cards { grid-template-columns: 1fr; } .card { min-width: 0; min-height: unset; font-size: 0.95rem; } } 
+@media (max-width: 480px) { .navbar { flex-direction: column; align-items: flex-start; padding: 15px 20px; } .navbar-left { margin-bottom: 15px; } .nav-links { flex-direction: column; width: 100%; gap: 10px; flex-wrap: wrap; } .nav-links li a { display: block; text-align: center; } .navbar-title { font-size: 20px; } .navbar-logo { width: 35px; height: 35px; } }
