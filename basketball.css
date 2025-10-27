@@ -435,3 +435,18 @@ body {
   font-weight: bold;
   text-decoration: none;
 }
+/* Add this to your basketball.css */
+.table-filter-controls {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+}
+
+#levelFilter {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 10px;
+    font-size: 16px;
+}
