@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* General Reset */
 body {
     font-family: Arial, sans-serif;
@@ -156,4 +157,164 @@ footer {
     padding: 15px;
     background: #333;
     color: white;
+=======
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #621414;
+    color: white;
+}
+
+.navbar .logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Page Heading */
+
+.page-header {
+    background-color: #621414;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 30px auto 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    width: auto;
+}
+
+.page-header h1 {
+    margin: 0;
+}
+
+/* Sections */
+.club-section {
+    padding: 40px 4cm 40px 4cm;
+}
+
+.club-section h2 {
+    margin-bottom: 20px;
+    color: #621414;
+    border-bottom: 2px solid #eee;
+    display: inline-block;
+}
+
+/* Cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.club-card {
+    width: 280px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.club-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.card-content {
+    padding: 20px 15px 20px 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 140px;
+}
+
+.card-content h3 {
+    margin: 8px 0;
+    font-size: 18px;
+    color: #1565c0;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+}
+
+.know-more {
+    display: inline-block;
+    margin-top: auto;
+    margin-bottom: 0;
+    padding: 6px 18px;
+    background-color:#621414;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-decoration: none;
+}
+.know-more:hover {
+    background-color: #1565c0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .card-container {
+        justify-content: center;
+        gap: 12px;
+    }
+    .club-card {
+        width: 140px;
+        min-width: 120px;
+        max-width: 160px;
+        font-size: 12px;
+    }
+    .club-card img {
+        height: 80px;
+    }
+    .card-content {
+        padding: 10px 6px 10px 6px;
+        min-height: 80px;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #333;
+    color: white;
+>>>>>>> 93b053f5786614d43d7de9b9574ddcce89562b8d
 }

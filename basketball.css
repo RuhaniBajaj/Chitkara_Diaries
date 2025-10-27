@@ -136,7 +136,10 @@ body {
     position: relative;
 }
 .registration-container h2::after {
+<<<<<<< HEAD
     content: "";
+=======
+>>>>>>> 93b053f5786614d43d7de9b9574ddcce89562b8d
     width: 60px;
     height: 4px;
     background: #ff6b35;
@@ -410,7 +413,11 @@ body {
 /* Tag styling */
 .tag {
   display: inline-block;
+<<<<<<< HEAD
   background: #672a2a;;
+=======
+  background: #672a2a;
+>>>>>>> 93b053f5786614d43d7de9b9574ddcce89562b8d
   color: #fff;
   padding: 4px 12px;
   border-radius: 20px;
@@ -435,4 +442,22 @@ body {
   color: #672a2a;;
   font-weight: bold;
   text-decoration: none;
+<<<<<<< HEAD
+=======
+}
+/* Add this to your basketball.css */
+.table-filter-controls {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+}
+
+#levelFilter {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 10px;
+    font-size: 16px;
+>>>>>>> 93b053f5786614d43d7de9b9574ddcce89562b8d
 }

@@ -1,0 +1,24 @@
+[
+  {
+    "fullname": "Tanveer Singh",
+    "roll": "2410990566",
+    "batch": "2024",
+    "course": "B.Tech",
+    "email": "tanveer0566.becse24@chitkara.edu.in",
+    "password": "Chitkara@566"
+  },
+  {
+    "id": 2,
+    "email": "teacher@example.com",
+    "password": "teach@789"
+  },
+  {
+    "id": "1761537456663",
+    "fullname": "Ruhani Bajaj",
+    "roll": "2410990560",
+    "batch": "2024",
+    "course": "B.Tech",
+    "email": "ruhani0560.becse24@chitkara.edu.in",
+    "password": "ruhani@1404"
+  }
+]
