@@ -1,0 +1,48 @@
+{
+  "Library": [
+    {
+      "author": "Bookworm",
+      "text": "So quiet and peaceful. I go there to get away from the hostel noise."
+    },
+    {
+      "author": "A Student",
+      "text": "The library is the best spot for focused study. Always quiet!"
+    },
+    {
+      "author": "Reader",
+      "text": "Great collection of books, both academic and fiction."
+    }
+  ],
+  "Maggi": [
+    {
+      "author": "Hostelite",
+      "text": "The Maggi at Square 1 is a classic. Can't beat it. A must-have."
+    },
+    {
+      "author": "SnackLover",
+      "text": "My go-to comfort food on campus."
+    }
+  ],
+  "Alpha Zone": [
+    {
+      "author": "Shutterbug",
+      "text": "Best place for photos, especially in the evening light."
+    },
+    {
+      "author": "ruhani",
+      "text": "good place "
+    }
+  ],
+  "Dohful": [
+    {
+      "author": "Ruhani Bajaj",
+      "text": "very gud coffee"
+    }
+  ],
+  "Drama Club": [
+    {
+      "author": "ruhani",
+      "text": "ok"
+    }
+  ]
+}
