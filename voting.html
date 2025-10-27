@@ -1,0 +1,435 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Campus Voting Page</title> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> 
+  <link rel="stylesheet" href="voting.css"> 
+</head> 
+<body> 
+
+  <nav class="navbar"> 
+    <div class="navbar-left"> 
+      <img src="chitkara-logo.png" alt="Chitkara" class="navbar-logo"> 
+      <span class="navbar-title">Chitkara Diaries</span> 
+    </div> 
+    <ul class="nav-links"> 
+      <li><a href="#home">Home</a></li> 
+      <li><a href="#journal">Journal</a></li> 
+      <li><a href="#popular">Popular</a></li> 
+      <li><a href="#clubs">Clubs</a></li> 
+      <li><a href="#contact">Contact</a></li> 
+    </ul> 
+  </nav> 
+
+  <div class="main"> 
+    
+    <div class="main-content-wrapper">
+
+        <nav class="hamburger-menu" id="hamburgerMenu"> 
+            <div class="menu-header"> 
+                <i class="fas fa-bars"></i> 
+                <span>Voting Menu</span> 
+            </div> 
+            <div class="hamburger-links"> 
+                <a href="#fav-place-domain" class="hamburger-link"><i class="fas fa-map-marker-alt"></i><span>Fav Place</span></a> 
+                <a href="#hangout-domain" class="hamburger-link"><i class="fas fa-users"></i><span>Hangout</span></a> 
+                <a href="#food-domain" class="hamburger-link"><i class="fas fa-utensils"></i><span>Food</span></a> 
+                <a href="#events-domain" class="hamburger-link"><i class="fas fa-calendar-alt"></i><span>Events</span></a> 
+                <a href="#clubs-domain" class="hamburger-link"><i class="fas fa-music"></i><span>Clubs</span></a> 
+                <a href="#sports-domain" class="hamburger-link"><i class="fas fa-futbol"></i><span>Sports</span></a> 
+                <a href="#library-domain" class="hamburger-link"><i class="fas fa-book"></i><span>Library</span></a> 
+                <a href="#hostel-domain" class="hamburger-link"><i class="fas fa-bed"></i><span>Hostel</span></a> 
+                <a href="#memories-domain" class="hamburger-link"><i class="fas fa-star"></i><span>Memories</span></a> 
+            </div> 
+        </nav> 
+
+        <div class="questions-grid"> 
+            
+            <div class="domain-section" id="fav-place-domain" style="margin-top: 0.5rem;"> 
+                <div class="domain-title">Favorite Place</div> 
+                <div class="domain-cards"> 
+                    <div class="card"> 
+                        <h3>What is your most favorite place to visit in Chitkara University?</h3> 
+                        <div class="options"> 
+                            <label><input type="radio" name="q1" value="Square 1"> Square 1</label> 
+                            <label><input type="radio" name="q1" value="Library"> Library</label> 
+                            <label><input type="radio" name="q1" value="Sportorium"> Sportorium</label> 
+                            <label><input type="radio" name="q1" value="Other"> Other</label> 
+                        </div> 
+                        <button class="submit-btn">Submit Vote</button> 
+                    </div> 
+                    <div class="card"> 
+                        <h3>Which is the most photogenic spot on campus?</h3> 
+                        <div class="options"> 
+                            <label><input type="radio" name="q2" value="Alpha Zone"> Alpha Zone</label> 
+                            <label><input type="radio" name="q2" value="Hostel Road"> Hostel Road</label> 
+                            <label><input type="radio" name="q2" value="Exploretorium"> Exploretorium</label> 
+                            <label><input type="radio" name="q2" value="Other"> Other</label> 
+                        </div> 
+                        <button class="submit-btn">Submit Vote</button> 
+                    </div> 
+                    <div class="card"> 
+                        <h3>Where do you go for peace and quiet?</h3> 
+                        <div class="options"> 
+                            <label><input type="radio" name="q3" value="Library"> Library</label> 
+                            <label><input type="radio" name="q3" value="Alpha Zone"> Alpha Zone</label> 
+                            <label><input type="radio" name="q3" value="Temple"> Temple</label> 
+                            <label><input type="radio" name="q3" value="Hostel Room"> Hostel Room</label> 
+                        </div> 
+                        <button class="submit-btn">Submit Vote</button> 
+                    </div> 
+                    <div class="card"> 
+                        <h3>Where do you go for studies?</h3> 
+                        <div class="options"> 
+                            <label><input type="radio" name="q3_studies" value="Library"> Library</label> 
+                            <label><input type="radio" name="q3_studies" value="Alpha Zone"> Alpha Zone</label> 
+                            <label><input type="radio" name="q3_studies" value="Temple"> Temple</label> 
+                            <label><input type="radio" name="q3_studies" value="Hostel Room"> Hostel Room</label> 
+                        </div> 
+                        <button class="submit-btn">Submit Vote</button> 
+                    </div>
+                    <div class="card">
+                        <h3>Where do you attend classes?</h3>
+                        <div class="options">
+                            <label><input type="radio" name ="q4_classes" value="Turing">Turing</label>
+                            <label><input type="radio" name ="q4_classes" value="Pythagoras">Pythagoras</label>
+                            <label><input type="radio" name ="q4_classes" value="Fleming">Fleming</label>
+                            <label><input type="radio" name ="q4_classes" value="Tesla">Tesla</label>
+                        </div>
+                        <button class="submit-btn">Submit Vote</button>
+                    </div> 
+                </div> 
+            </div> 
+            
+            <div class="domain-section" id="hangout-domain"> 
+                <div class="domain-title">Hangout</div> 
+                <div class="domain-cards"> 
+                    <div class="card"> 
+                        <h3>Favorite place to hangout with friends?</h3> 
+                        <div class="options"> 
+                            <label><input type="radio" name="q4" value="Subway"> Subway</label> 
+                            <label><input type="radio" name="q4" value="Square 1"> Square 1 </label> 
+                            <label><input type="radio" name="q4" value="Hostel Common Room"> Hostel Common Room</label> 
+                            <label><input type="radio" name="q4" value="Other"> Other</label> 
+                        </div> 
+                        <button class="submit-btn">Submit Vote</button> 
+                    </div> 
+                    <div class="card"> 
+                        <h3>Where do you spend most of your free time?</h3> 
+                        <div class="options"> 
+                            <label><input type="radio" name="q5" value="Hostel"> Hostel</label> 
+                            <label><input type="radio" name="q5" value="Square 1"> Square 1</label> 
+                            <label><input type="radio" name="q5" value="Library"> Library</label> 
+                            <label><input type="radio" name="q5" value="Sports Ground"> Sports Ground</label> 
+                        </div> 
+                        <button class="submit-btn">Submit Vote</button> 
+                    </div> 
+                    <div class="card"> 
+                        <h3>Best place for group study?</h3> 
+                        <div class="options"> 
+                            <label><input type="radio" name="q6" value="Library"> Library</label> 
+                            <label><input type="radio" name="q6" value="Hostel Room"> Hostel Room</label> 
+                            <label><input type="radio" name="q6" value="Square 1"> Square 1</label> 
+                            <label><input type="radio" name="q6" value="CSE Block"> CSE Block</label> 
+                        </div> 
+                        <button class="submit-btn">Submit Vote</button> 
+                    </div> 
+                </div> 
+            </div> 
+            
+            <div class="domain-section" id="food-domain"> 
+                <div class="domain-title">Food</div> 
+                <div class="domain-cards"> 
+                    <div class="card"> 
+                        <h3>Best food spot on campus?</h3> 
+                        <div class="options"> 
+                            <label><input type="radio" name="q7" value="Square 1"> Square 1</label> 
+                            <label><input type="radio" name="q7" value="Square 2"> Square 2</label> 
+                            <label><input type="radio" name="q7" value="Subway"> Subway </label> 
+                            <label><input type="radio" name="q7" value="First Coffee"> First Coffee</label> 
+                        </div> 
+                        <button class="submit-btn">Submit Vote</button> 
+                    </div> 
+                    <div class="card"> 
+                        <h3>Favorite snack at Chitkara?</h3> 
+                        <div class="options"> 
+                            <label><input type="radio" name="q8" value="Maggi"> Maggi</label> 
+                            <label><input type="radio" name="q8" value="Sandwich"> Sandwich</label> 
+                            <label><input type="radio" name="q8" value="Chaat"> Chaat</label> 
+                            <label><input type="radio" name="q8" value="Pasta"> Pasta</label> 
+                        </div> 
+                        <button class="submit-btn">Submit Vote</button> 
+                    </div> 
+                    <div class="card">
+                         <h3>Where do you get the best coffee?</h3> 
+                         <div class="options">
+                             <label><input type="radio" name="q9" value="Dohful"> Dohful</label>
+                             <label><input type="radio" name="q9" value="Chai Nagri"> Chai Nagri</label>
+                             <label><input type="radio" name="q9" value="First Coffee"> First Coffee</label>
+                             <label><input type="radio" name="q9" value="Hostel Mess"> Hostel Mess</label>
+                         </div>
+                         <button class="submit-btn">Submit Vote</button> 
+                    </div> 
+                </div> 
+            </div>
+            
+             <div class="domain-section" id="events-domain">
+                 <div class="domain-title">Events</div> 
+                 <div class="domain-cards"> 
+                    <div class="card"> 
+                        <h3>Which event do you enjoy the most?</h3> 
+                        <div class="options"> 
+                            <label><input type="radio" name="q10" value="Freshers'"> Freshers'</label> 
+                            <label><input type="radio" name="q10" value="Rangrezz"> Rangrezz</label> 
+                            <label><input type="radio" name="q10" value="Sports Fest"> Sports Fest</label> 
+                            <label><input type="radio" name="q10" value="Other"> Other</label> 
+                        </div> 
+                        <button class="submit-btn">Submit Vote</button> 
+                    </div>
+                     <div class="card"> 
+                        <h3>Which event has the best food stalls?</h3> 
+                        <div class="options"> 
+                            <label><input type="radio" name="q11" value="Rangrezz"> Rangrezz</label> 
+                            <label><input type="radio" name="q11" value="Sports Fest"> Sports Fest</label> 
+                            <label><input type="radio" name="q11" value="Hostel Night"> Hostel Night</label>
+                             <label><input type="radio" name="q11" value="Other"> Other</label>
+                         </div> 
+                         <button class="submit-btn">Submit Vote</button> 
+                    </div> 
+                    <div class="card">
+                        <h3>Which event do you participate in the most?</h3> 
+                        <div class="options">
+                             <label><input type="radio" name="q12" value="Sports Fest"> Sports Fest</label> 
+                             <label><input type="radio" name="q12" value="Freshers'"> Freshers'</label>
+                              <label><input type="radio" name="q12" value="Hostel Night"> Hostel Night</label> 
+                              <label><input type="radio" name="q12" value="None"> None</label> 
+                        </div> 
+                        <button class="submit-btn">Submit Vote</button> 
+                    </div> 
+                </div> 
+            </div>
+            
+           <div class="domain-section" id="clubs-domain"> 
+                <div class="domain-title">Clubs</div>
+                 <div class="domain-cards"> 
+                    <div class="card">
+                         <h3>Which club is your favorite?</h3> 
+                         <div class="options"> 
+                            <label><input type="radio" name="q13" value="Music Club"> Music Club</label> 
+                            <label><input type="radio" name="q13" value="Dance Club"> Dance Club</label>
+                             <label><input type="radio" name="q13" value="Coding Club"> Coding Club</label>
+                              <label><input type="radio" name="q13" value="Drama Club"> Drama Club</label>
+                         </div>
+                         <button class="submit-btn">Submit Vote</button>
+                    </div>
+                    <div class="card"> 
+                        <h3>Which club organizes the best events?</h3>
+                         <div class="options"> 
+                            <label><input type="radio" name="q14" value="Music Club"> Music Club</label> 
+                            <label><input type="radio" name="q14" value="Dance Club"> Dance Club</label> 
+                            <label><input type="radio" name="q14" value="Coding Club"> Coding Club</label>
+                             <label><input type="radio" name="q14" value="Drama Club"> Drama Club</label>
+                         </div> 
+                        <button class="submit-btn">Submit Vote</button>
+                    </div> 
+                    <div class="card"> 
+                        <h3>Which club would you like to join?</h3> 
+                        <div class="options"> 
+                            <label><input type="radio" name="q15" value="Music Club"> Music Club</label> 
+                            <label><input type="radio" name="q15" value="Dance Club"> Dance Club</label> 
+                            <label><input type="radio" name="q15" value="Coding Club"> Coding Club</label>
+                             <label><input type="radio" name="q15" value="Drama Club"> Drama Club</label> 
+                        </div> 
+                        <button class="submit-btn">Submit Vote</button>
+                    </div> 
+                </div> 
+            </div>
+            
+             <div class="domain-section" id="sports-domain">
+                 <div class="domain-title">Sports</div> 
+                 <div class="domain-cards"> 
+                     <div class="card"> 
+                        <h3>Favorite sport to play at Chitkara?</h3> 
+                        <div class="options"> 
+                            <label><input type="radio" name="q16" value="Football"> Football</label>
+                             <label><input type="radio" name="q16" value="Basketball"> Basketball</label>
+                              <label><input type="radio" name="q16" value="Cricket"> Cricket</label> 
+                              <label><input type="radio" name="q16" value="Badminton"> Badminton</label> 
+                        </div> 
+                        <button class="submit-btn">Submit Vote</button>
+                     </div> 
+                     <div class="card"> 
+                         <h3>Which sport do you watch the most?</h3>
+                         <div class="options"> 
+                            <label><input type="radio" name="q17" value="Football"> Football</label> 
+                            <label><input type="radio" name="q17" value="Basketball"> Basketball</label> 
+                            <label><input type="radio" name="q17" value="Cricket"> Cricket</label> 
+                            <label><input type="radio" name="q17" value="Volleyball"> Volleyball</label>
+                         </div> 
+                         <button class="submit-btn">Submit Vote</button>
+                     </div>
+                      <div class="card">
+                         <h3>Which sport would you like to see more events for?</h3> 
+                         <div class="options"> 
+                            <label><input type="radio" name="q18" value="Football"> Football</label> 
+                            <label><input type="radio" name="q18" value="Basketball"> Basketball</label> 
+                            <label><input type="radio" name="q18" value="Cricket"> Cricket</label> 
+                            <label><input type="radio" name="q18" value="Pickleball"> Pickleball</label>
+                         </div>
+                         <button class="submit-btn">Submit Vote</button>
+                      </div>
+                 </div> 
+               </div> 
+               
+              <div class="domain-section" id="library-domain">
+                 <div class="domain-title">Library</div>
+                  <div class="domain-cards"> 
+                    <div class="card"> 
+                      <h3>How often do you visit the library?</h3> 
+                      <div class="options"> 
+                        <label><input type="radio" name="q19" value="Daily">Daily</label>
+                         <label><input type="radio" name="q19" value="Weekly"> Weekly</label>
+                          <label><input type="radio" name="q19" value="Rarely"> Rarely</label>
+                           <label><input type="radio" name="q19" value="Never"> Never</label>
+                       </div>                              
+                       <button class="submit-btn">Submit Vote</button> 
+                    </div> 
+                    <div class="card"> 
+                        <h3>Favorite spot in the library?</h3> 
+                        <div class="options"> 
+                            <label><input type="radio" name="q20" value="Reading Room"> Reading Room</label> 
+                            <label><input type="radio" name="q20" value="Computer Section"> Computer Section</label> 
+                            <label><input type="radio" name="q20" value="Group Study Area"> Group Study Area</label> 
+                            <label><input type="radio" name="q20" value="Stacks"> Stacks</label> 
+                        </div> 
+                        <button class="submit-btn">Submit Vote</button> 
+                    </div> 
+                    <div class="card"> 
+                        <h3>What do you use the library for most?</h3> 
+                        <div class="options"> 
+                            <label><input type="radio" name="q21" value="Study"> Study</label> 
+                            <label><input type="radio" name="q21" value="Group Work"> Group Work</label> 
+                            <label><input type="radio" name="q21" value="Research"> Research</label> 
+                            <label><input type="radio" name="q21" value="Reading Novels"> Reading Novels</label> 
+                        </div> 
+                        <button class="submit-btn">Submit Vote</button> 
+                    </div> 
+                  </div> 
+               </div> 
+               
+              <div class="domain-section" id="hostel-domain"> 
+                   <div class="domain-title">Hostel</div> 
+                   <div class="domain-cards"> 
+                       <div class="card"> 
+                           <h3>Best thing about hostel life?</h3> 
+                           <div class="options"> 
+                               <label><input type="radio" name="q22" value="Friends"> Friends</label> 
+                               <label><input type="radio" name="q22" value="Food"> Food</label> 
+                               <label><input type="radio" name="q22" value="Freedom"> Freedom</label> 
+                               <label><input type="radio" name="q22" value="Events"> Events</label> 
+                            </div> 
+                           <button class="submit-btn">Submit Vote</button> 
+                        </div> 
+                       <div class="card"> 
+                           <h3>What do you miss most about hostel during holidays?</h3> 
+                           <div class="options"> 
+                               <label><input type="radio" name="q23" value="Friends"> Friends</label> 
+                               <label><input type="radio" name="q23" value="Hostel Food"> Hostel Food</label> 
+                               <label><input type="radio" name="q23" value="Hostel Events"> Hostel Events</label> 
+                               <label><input type="radio" name="q23" value="Nothing"> Nothing</label> 
+                            </div> 
+                           <button class="submit-btn">Submit Vote</button> 
+                        </div> 
+                       <div class="card"> 
+                           <h3>Favorite hostel event?</h3> 
+                           <div class="options"> 
+                               <label><input type="radio" name="q24" value="Hostel Night"> Hostel Night</label> 
+                               <label><input type="radio" name="q24" value="DJ Night"> DJ Night</label> 
+                               <label><input type="radio" name="q24" value="Sports"> Sports</label> 
+                               <label><input type="radio" name="q24" value="Other"> Other</label> 
+                            </div> 
+                           <button class="submit-btn">Submit Vote</button> 
+                        </div> 
+                    </div> 
+                </div> 
+                
+               <div class="domain-section" id="memories-domain"> 
+                    <div class="domain-title">Memories</div> 
+                    <div class="domain-cards"> 
+                        <div class="card"> 
+                            <h3>Your most memorable moment at Chitkara?</h3> 
+                            <div class="options"> 
+                                <label><input type="radio" name="q25" value="First Day"> First Day</label> 
+                                <label><input type="radio" name="q25" value="Fests"> Fests</label> 
+                                <label><input type="radio" name="q25" value="Hostel Nights"> Hostel Nights</label> 
+                                <label><input type="radio" name="q25" value="Other"> Other</label> 
+                            </div> 
+                            <button class="submit-btn">Submit Vote</button> 
+                        </div> 
+                        <div class="card"> 
+                            <h3>Best memory with friends?</h3> 
+                            <div class="options"> 
+                                <label><input type="radio" name="q26" value="Group Study"> Group Study</label> 
+                                <label><input type="radio" name="q26" value="Night Outs"> Night Outs</label> 
+                                <label><input type="radio" name="q26" value="Hostel Fun"> Hostel Fun</label> 
+                                <label><input type="radio" name="q26" value="Trips"> Trips</label> 
+                            </div> 
+                            <button class="submit-btn">Submit Vote</button> 
+                        </div> 
+                        <div class="card"> 
+                            <h3>Which moment would you relive?</h3> 
+                            <div class="options"> 
+                                <label><input type="radio" name="q27" value="First Day"> First Day</label> 
+                                <label><input type="radio" name="q27" value="Fests"> Fests</label> 
+                                <label><input type="radio" name="q27" value="Hostel Nights"> Hostel Nights</label> 
+                                <label><input type="radio" name="q27" value="Other"> Other</label> 
+                            </div> 
+                            <button class="submit-btn">Submit Vote</button> 
+                        </div> 
+                    </div> 
+                </div> 
+
+        </div> </div> <aside class="review-panel" id="reviewPanel">
+        <div class="review-header">
+            <h3><i class="fas fa-comments"></i> Recent Reviews</h3>
+            <button class="add-review-btn-header" id="showReviewModalBtn">
+                <i class="fas fa-plus"></i> Add Review
+            </button>
+        </div>
+        <div class="review-content" id="reviewContent">
+            </div>
+    </aside>
+
+  </div> <div class="modal-overlay" id="reviewModalOverlay">
+    <div class="modal-box">
+        <div class="modal-header">
+            <h3>Write a Review</h3>
+            <button class="modal-close-btn" id="modalCloseBtn">&times;</button>
+        </div>
+        <div class="modal-content">
+            <form id="reviewForm">
+                <div class="form-group">
+                    <label for="reviewAuthor">Your Name:</label>
+                    <input type="text" id="reviewAuthor" name="author" required>
+                </div>
+                <div class="form-group">
+                    <label for="reviewOptionSelect">Which option are you reviewing?</label>
+                    <select id="reviewOptionSelect" name="option" required>
+                        </select>
+                </div>
+                <div class="form-group">
+                    <label for="reviewText">Your Review:</label>
+                    <textarea id="reviewText" name="text" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn modal-submit-btn">Submit Review</button>
+            </form>
+        </div>
+    </div>
+  </div>
+
+  <script src="voting.js" defer></script> 
+
+</body>
+</html>
