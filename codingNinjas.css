@@ -341,3 +341,70 @@
         padding: 30px 20px;
     }
 }
+/* --- LEADER SPOTLIGHT COLUMN STYLING --- */
+
+.player-spotlight-column {
+    flex: 1;
+    min-width: 300px;
+    padding: 50px 20px;
+    /* Dark background for contrast */
+    background-color: #672a2a; 
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.spotlight-title {
+    color: #fff; 
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    /* Red accent under the title */
+    border-bottom: 3px solid #E84C3D; 
+    width: 100%;
+}
+
+/* --- IMAGE CONTAINER STYLING --- */
+
+.player-photo-placeholder {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes it circular */
+    /* Red accent border */
+    border: 4px solid #E84C3D;
+    margin-bottom: 20px;
+    background: #444; /* Fallback background color */
+    overflow: hidden; /* Crucial to clip the image to the circle */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.leader-profile-img {
+    width: 100%;           /* Image fills the placeholder width */
+    height: 100%;          /* Image fills the placeholder height */
+    object-fit: cover;     /* Crops image to fill container without distortion */
+    border-radius: 50%;    /* Ensures the image itself is also circular */
+}
+
+/* --- ADDITIONAL DETAIL STYLING (For context) --- */
+
+.player-details h3 {
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-size: 2.2rem;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.player-number {
+    font-size: 3.5rem;
+    line-height: 1;
+    color: #E84C3D; /* Red Accent */
+    margin-bottom: 5px;
+}
