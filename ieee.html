@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Ninjas CUIET</title>
+    <link rel="stylesheet" href="navbar[1].css">
+    <link rel="stylesheet" href="basketball.css">
+    <link rel="stylesheet" href="codingNinjas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+</head>
+<body>
+        <header>
+        <nav class="navbar">
+  <div class="navbar-left">
+    <img src="images/logo.png" alt="Chitkara Logo" class="navbar-logo">
+    <span class="navbar-title">Chitkara Diaries</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="homepage.html">Home</a></li>
+    <li><a href="journal.html">Journal</a></li>
+    <li><a href="voting.html">Popular</a></li>
+    <li><a href="club_page.html">Clubs</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+</header>
+     <!-- Container 1: Moving Images -->
+    <div class="moving-images-container">
+        <div class="moving-strip">
+            <div class="moving-image"><img src=".jpg" alt="img2">  </div>
+            <div class="moving-image"><img src=".jpg" alt="img6" > </div>
+            <div class="moving-image"><img src=".jpg" alt="img7" > </div>
+            <div class="moving-image"><img src=".jpg" alt="img5" > </div>
+            <div class="moving-image"><img src=".jpg" alt="img8" > </div>
+        </div>
+    </div>
+    <div class="about-container">
+        <div class="about-text">
+            <h2>Our Mission: Building Coding Excellence</h2>
+                <p>he IEEE Tech Society of Chitkara University is a dynamic community of innovators, engineers, and technology 
+                    enthusiasts committed to advancing knowledge and innovation in the field of engineering and technology.
+                    We aim to bridge the gap between theory and practice by empowering students through hands-on projects, workshops, hackathons, 
+                    and technical events aligned with IEEE’s global vision. <br> We foster teamwork, critical thinking, and disciplined practice, 
+                    believing that true coding mastery comes from consistent effort and collaborative learning. Join us to transform your passion for code into professional 
+                     success. Our society serves as a platform for students to explore emerging technologies, collaborate on impactful research, and build solutions that address real-world challenges.</p>
+           </div>
+        <div class="about-image">
+            <div class="basketball-court">
+                <video autoplay muted loop >
+        <source src="" type="video/mp4">
+        Your browser does not support the video.
+    </video>
+            </div>
+        </div>
+    </div><br><br>
+
+    <section class="section-padded" id="combined-section">
+        <div class="container combined-layout">
+            
+            <div class="split-column member-registration-column" id="member-registration">
+                <h2 class="column-title registration-title">💡 Club Membership Form</h2>
+                <p class="form-intro">Sign up here to join our core team and receive event invitations. Fields marked * are mandatory.</p>
+                <form id="memberRegistrationForm" class="registration-form">
+                    <div class="form-grid">
+                        <div class="form-group floating-label">
+                            <input type="text" id="regFirstName" name="firstName" placeholder=" " required>
+                            <label for="regFirstName">First Name *</label>
+                        </div>
+                        <div class="form-group floating-label">
+                            <input type="text" id="regLastName" name="lastName" placeholder=" " required>
+                            <label for="regLastName">Last Name *</label>
+                        </div>
+                        <div class="form-group floating-label">
+                            <input type="email" id="regEmail" name="email" placeholder=" " required>
+                            <label for="regEmail">Email Address *</label>
+                        </div>
+                        <div class="form-group floating-label">
+                            <input type="text" id="regRollNumber" name="rollNumber" placeholder=" " required>
+                            <label for="regRollNumber">Roll Number *</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="regDepartment">Department *</label>
+                            <select id="regDepartment" name="department" required>
+                                <option value="" disabled selected>Select Department</option>
+                                <option value="CSE">CSE/CS</option>
+                                <option value="ECE">ECE</option>
+                                <option value="IT">IT</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                         <div class="form-group">
+                            <label for="regLevel">Programming Level *</label>
+                            <select id="regLevel" name="level" required>
+                                <option value="" disabled selected>Select Level</option>
+                                <option value="beginner">Beginner (Basic Syntax)</option>
+                                <option value="intermediate">Intermediate (DS/Algo)</option>
+                                <option value="expert">Expert (Contestant)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group full-width floating-label">
+                            <input type="url" id="regCodechef" name="codechefUrl" placeholder=" ">
+                            <label for="regCodechef">CodeChef/LeetCode Profile Link</label>
+                        </div>
+                        <div class="form-group full-width floating-label">
+                            <textarea id="regGoals" name="goals" placeholder=" "></textarea>
+                            <label for="regGoals">What do you hope to learn?</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn full-width">Join IEEE</button>
+                </form>
+            </div>
+
+            <div class="player-spotlight-column" id="spotlight">
+    <h2 class="column-title spotlight-title">Leader Spotlight</h2>
+    <div class="featured-card">
+        <div class="player-photo-placeholder">
+            <img src="cnimg.jpg" alt="Aashima Rana" class="leader-profile-img">
+        </div>
+        <div class="player-details">
+            <span class="player-number">#01</span>
+            <h3>Aashima Rana</h3>
+            <p class="player-position">Club President & CP Lead</p>
+            <ul class="player-stats-list">
+                <li class="stat-item" data-stat="rank" data-value="1780"><strong>Max Codeforces Rating:</strong> <span class="stat-value">0</span></li>
+                <li class="stat-item" data-stat="problems" data-value="300"><strong>Problems Solved:</strong> <span class="stat-value">0</span></li>
+                <li class="stat-item" data-stat="hackathons" data-value="4"><strong>Hackathons Won:</strong> <span class="stat-value">0</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </section>
+
+    <section class="section-padded events-section" id="events">
+        <div class="container">
+            <h2 class="section-title events-title">📅 Upcoming Coding Events</h2>
+            
+            <div class="events-grid">
+                
+                <div class="event-card">
+                    <div class="event-date-box">
+                        <span class="month">NOV</span>
+                        <span class="day">05</span>
+                    </div>
+                    <div class="event-details">
+                        <h3 class="event-name">Weekly Algo Sprint #4</h3>
+                        <p class="event-description">Practice session focusing on Dynamic Programming and Graph Algorithms. All levels welcome.</p>
+                        <span class="event-location"><i class="fas fa-desktop"></i> CS Lab, Turing Block</span>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date-box">
+                        <span class="month">NOV</span>
+                        <span class="day">18</span>
+                    </div>
+                    <div class="event-details">
+                        <h3 class="event-name">Mock Technical Interview Workshop</h3>
+                        <p class="event-description">Simulation of final-round interview coding questions led by a Google SDE.</p>
+                        <span class="event-location"><i class="fas fa-user-tie"></i> Seminar Hall B</span>
+                    </div>
+                </div>
+                
+                <div class="event-card">
+                    <div class="event-date-box">
+                        <span class="month">DEC</span>
+                        <span class="day">01</span>
+                    </div>
+                    <div class="event-details">
+                        <h3 class="event-name">Intra-College Hackathon: Code-a-thon</h3>
+                        <p class="event-description">24-hour non-stop coding challenge. Form your teams and compete for cash prizes!</p>
+                        <span class="event-location"><i class="fas fa-laptop-code"></i> Innovation Center</span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer class="footer">
+        </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- JS FOR REGISTRATION FORM SUBMISSION ---
+            const registrationForm = document.getElementById('memberRegistrationForm');
+
+            if (registrationForm) {
+                registrationForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+
+                    const requiredFields = this.querySelectorAll('[required]');
+                    let isValid = true;
+                    requiredFields.forEach(field => {
+                        if (!field.value.trim()) {
+                            isValid = false;
+                            field.classList.add('input-error'); 
+                        } else {
+                            field.classList.remove('input-error');
+                        }
+                    });
+
+                    if (isValid) {
+                        const formData = new FormData(this);
+                        const data = {};
+                        for (const [key, value] of formData.entries()) {
+                            data[key] = value;
+                        }
+                        
+                        console.log('Club Registration Data Submitted:', data);
+                        alert('🎉 Welcome to the club! We will process your application shortly.');
+                        this.reset();
+                    } else {
+                        alert('Please fill out all mandatory fields (*).');
+                    }
+                });
+            }
+
+            // --- JS FOR LEADER STATS ANIMATION ---
+            const spotlightSection = document.getElementById('spotlight');
+            let hasAnimated = false;
+
+            const animateNumber = (element, start, end, duration) => {
+                let startTime = null;
+                const decimalPlaces = (end.toString().includes('.')) ? (end.toString().split('.')[1] || '').length : 0;
+
+                const step = (currentTime) => {
+                    if (!startTime) startTime = currentTime;
+                    const progress = Math.min((currentTime - startTime) / duration, 1);
+                    const currentValue = start + (progress * (end - start));
+                    element.textContent = currentValue.toFixed(decimalPlaces);
+
+                    if (progress < 1) {
+                        requestAnimationFrame(step);
+                    }
+                };
+                requestAnimationFrame(step);
+            };
+
+            const runStatsAnimation = () => {
+                if (hasAnimated) return;
+
+                const statItems = spotlightSection.querySelectorAll('.stat-item');
+                statItems.forEach(item => {
+                    const statValueSpan = item.querySelector('.stat-value');
+                    const targetValue = parseFloat(item.dataset.value);
+                    
+                    if (statValueSpan && !isNaN(targetValue)) {
+                        animateNumber(statValueSpan, 0, targetValue, 1500);
+                    }
+                });
+                hasAnimated = true;
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        runStatsAnimation();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.5
+            });
+
+            if (spotlightSection) {
+                observer.observe(spotlightSection);
+            }
+        });
+    </script>
+    <!-- head info -->
+    <div class="footer-info">
+      <h3>Team Coordinator</h3>
+      <p><strong>Name:</strong> Arjun Kapoor</p>
+      <p><strong>Phone:</strong> +91 98765 43210</p>
+      <p><strong>Email:</strong> arjun.kapoor@chitkara.edu.in</p>
+    </div>
+
+   <!-- socials -->
+    <div class="footer-social">
+      <h3>Connect with Chitkara University</h3>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/school/chitkara-university/" target="_blank" class="linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://www.instagram.com/chitkarau?igsh=M2V0cWozYmhxbDEw" target="_blank" class="instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://youtube.com/@chitkarauniversity?si=LVkoB_d80E0_aqfu" target="_blank" class="youtube">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

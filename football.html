@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navbar[1].css">
+    <link rel="stylesheet" href="basketball.css">
+    <link rel="stylesheet" href="cricket.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Football</title>
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <img src="images/logo.png" alt="Chitkara Logo" class="navbar-logo">
+            <span class="navbar-title">Chitkara Diaries</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="journal.html">Journal</a></li>
+            <li><a href="voting.html">Popular</a></li>
+            <li><a href="club_page.html">Clubs</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Moving Images -->
+<div class="moving-images-container">
+    <div class="moving-strip">
+        <div class="moving-image"><img src="football1.jpg" alt="Football 1"></div>
+        <div class="moving-image"><img src="football2.jpg" alt="Football 2"></div>
+        <div class="moving-image"><img src="football3.jpg" alt="Football 3"></div>
+        <div class="moving-image"><img src="football4.jpg" alt="Football 4"></div>
+        <div class="moving-image"><img src="football5.jpg" alt="Football 5"></div>
+    </div>
+</div>
+
+<!-- About Section -->
+<div class="about-container">
+    <div class="about-text">
+        <h2>The Spirit of the Game</h2>
+        <p>The Football Club of Chitkara University stands on a foundation of agility, grit, and tactical excellence. Our players don’t just play the game — they engineer it. With swift footwork, strategic formation play, and relentless drive, the squad operates like a high‑performance unit built to dominate the pitch.</p>
+        <p>Our training ecosystem is built around structured drills, endurance conditioning, and technical sharpening sessions overseen by certified coaches. Every player is developed to think fast, adapt faster, and execute with precision — whether in high‑pressure league matches or fast‑paced 5‑a‑side formats.</p>
+        <p>We’ve established a reputation for competing fiercely in inter‑university championships and regional leagues. But beyond the scoreboard, we champion teamwork, leadership, discipline, and respect for the sport. Here, football isn’t just a game — it’s a culture, a mindset, and a continued pursuit of excellence.</p>
+    </div>
+
+    <div class="about-image">
+        <div class="football-video">
+            <video autoplay muted loop>
+                <source src="footballvid.mp4" type="video/mp4">
+                Your browser does not support the video.
+            </video>
+        </div>
+    </div>
+</div>
+<br><br>
+
+<!-- Tryout Registration -->
+<section class="section-padded" id="combined-section">
+<div class="container combined-layout">
+
+    <div class="split-column tryout-registration-column" id="tryout-join">
+        <h2 class="column-title tryout-title">🚨 Open Tryout Registration</h2>
+        <p class="form-intro">Register now to be part of the official university football trials. Fields marked * are mandatory.</p>
+        <form id="tryoutRegistrationForm" class="registration-form">
+            <div class="form-grid">
+                <div class="form-group floating-label">
+                    <input type="text" id="tryoutFirstName" name="firstName" placeholder=" " required>
+                    <label for="tryoutFirstName">First Name *</label>
+                </div>
+                <div class="form-group floating-label">
+                    <input type="text" id="tryoutLastName" name="lastName" placeholder=" " required>
+                    <label for="tryoutLastName">Last Name *</label>
+                </div>
+                <div class="form-group floating-label">
+                    <input type="email" id="tryoutEmail" name="email" placeholder=" " required>
+                    <label for="tryoutEmail">Email Address *</label>
+                </div>
+                <div class="form-group floating-label">
+                    <input type="number" id="tryoutAge" name="age" min="12" max="35" placeholder=" " required>
+                    <label for="tryoutAge">Age *</label>
+                </div>
+                <div class="form-group">
+                    <label for="tryoutPosition">Preferred Position *</label>
+                    <select id="tryoutPosition" name="position" required>
+                        <option value="" disabled selected>Select Position</option>
+                        <option value="forward">Forward</option>
+                        <option value="midfielder">Midfielder</option>
+                        <option value="defender">Defender</option>
+                        <option value="goalkeeper">Goalkeeper</option>
+                    </select>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="tryoutExperience">Highest Level Played *</label>
+                    <select id="tryoutExperience" name="experience" required>
+                        <option value="" disabled selected>Select Level</option>
+                        <option value="school">School / Local Academy</option>
+                        <option value="district">District / Regional Squad</option>
+                        <option value="state">State / National Age-Group</option>
+                    </select>
+                </div>
+                <div class="form-group full-width floating-label">
+                    <input type="tel" id="tryoutPhone" name="phone" placeholder=" " required>
+                    <label for="tryoutPhone">Phone Number *</label>
+                </div>
+                <div class="form-group full-width floating-label">
+                    <textarea id="tryoutAchievements" name="achievements" placeholder=" "></textarea>
+                    <label for="tryoutAchievements">Key Football Achievements</label>
+                </div>
+            </div>
+            <button type="submit" class="submit-btn full-width">Register for Tryouts</button>
+        </form>
+    </div>
+
+    <!-- Player Spotlight -->
+    <div class="player-spotlight-column">
+        <h2 class="column-title spotlight-title">Player Spotlight</h2>
+        <div class="featured-card">
+            <div class="player-photo-placeholder">
+                <img src="footballplayer.jpg" alt="Rohan Mehta" class="player-profile-img">
+            </div>
+            <div class="player-details">
+                <span class="player-number">#7</span>
+                <h3>Rohan Mehta</h3>
+                <p class="player-position">(Captain • Midfielder)</p>
+                <ul class="player-stats-list">
+                    <li class="stat-item" data-stat="goals" data-value="14"><strong>Goals:</strong> <span class="stat-value">0</span></li>
+                    <li class="stat-item" data-stat="assists" data-value="10"><strong>Assists:</strong> <span class="stat-value">0</span></li>
+                    <li class="stat-item" data-stat="passes" data-value="87"><strong>Pass Accuracy:</strong> <span class="stat-value">0%</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Events Section -->
+<section class="section-padded events-section" id="events">
+    <div class="container">
+        <h2 class="section-title events-title">📅 Upcoming Events</h2>
+
+        <div class="events-grid">
+            <div class="event-card">
+                <div class="event-date-box">
+                    <span class="month">JAN</span>
+                    <span class="day">28</span>
+                </div>
+                <div class="event-details">
+                    <h3 class="event-name">Elite Dribbling & Ball Control Workshop</h3>
+                    <p class="event-description">Hands-on mastery session focusing on close control, movement, and quick directional changes led by top university coaches.</p>
+                    <span class="event-location"><i class="fas fa-map-marker-alt"></i> CU Football Turf</span>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-date-box">
+                    <span class="month">FEB</span>
+                    <span class="day">03</span>
+                </div>
+                <div class="event-details">
+                    <h3 class="event-name">Friendly Match: CU XI vs Alumni Legends</h3>
+                    <p class="event-description">A high-energy 90-minute friendly match bringing together former university standouts and the current squad.</p>
+                    <span class="event-location"><i class="fas fa-map-marker-alt"></i> Main Football Ground</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="cricket.js"></script>
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-info">
+            <h3>Team Coordinator</h3>
+            <p><strong>Name:</strong> Aarav Sharma</p>
+            <p><strong>Phone:</strong> +91 98765 11223</p>
+            <p><strong>Email:</strong> aarav.sharma@chitkara.edu.in</p>
+        </div>
+
+        <div class="footer-social">
+            <h3>Connect with Chitkara University</h3>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/school/chitkara-university/" target="_blank" class="linkedin">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/chitkarau" target="_blank" class="instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://youtube.com/@chitkarauniversity" target="_blank" class="youtube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
